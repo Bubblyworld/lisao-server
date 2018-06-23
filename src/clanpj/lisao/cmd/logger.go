@@ -38,7 +38,7 @@ func (lw LogWriter) copy() {
 			return
 		}
 
-		log.Println(line)
+		log.Print(line)
 	}
 }
 

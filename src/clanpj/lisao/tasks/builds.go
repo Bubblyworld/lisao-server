@@ -28,7 +28,6 @@ func NewBuildInfo(commitHash, mainPath, outputPath string) BuildInfo {
 	}
 }
 
-// TODO(guy) add logging for stdout/stderr from exec.Run().
 // TODO(guy) workers should probably pass context down
 func DoBuild(work interface{}) error {
 	buildInfo, ok := work.(BuildInfo)
@@ -80,5 +79,6 @@ func (bi BuildInfo) buildMain() error {
 		WithArg(bi.mainPath).
 		SetEnv("GOPATH", absolutePath).
 		CD(absolutePath).
+		LogTo(cmd.NewLogWriter()).
 		Do()
 }

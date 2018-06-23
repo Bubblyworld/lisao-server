@@ -19,5 +19,7 @@ func main() {
 		"clanpj/lisao/mains/lichess", "/Users/guy/lichess")
 
 	err := tasks.DoBuild(buildInfo)
-	log.Print(err)
+	if err != nil {
+		log.Print(err)
+	}
 }
