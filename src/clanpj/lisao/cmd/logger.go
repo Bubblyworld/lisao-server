@@ -38,7 +38,7 @@ func (lw LogWriter) copy() {
 			return
 		}
 
-		log.Print(line)
+		log.Println(line)
 	}
 }
 
@@ -47,11 +47,11 @@ func (lw LogWriter) Write(data []byte) (int, error) {
 }
 
 func (lw LogWriter) Close() error {
-	err := lw.pipeReader.Close()
+	err := lw.pipeWriter.Close()
 	if err != nil {
 		return err
 	}
 
-	lw.doneCh <- true
+	<-lw.doneCh
 	return nil
 }
