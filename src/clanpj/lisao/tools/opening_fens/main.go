@@ -8,6 +8,7 @@ import (
 	"log"
 	"os"
 	"strings"
+	"unicode"
 )
 
 var pathToPGN = flag.String("pgn_path", "", "Path to a file containing a list of PGNS to parse.")
@@ -108,7 +109,7 @@ func parsePGNs(file *os.File) ([]PGN, error) {
 				fallthrough
 
 			case ReadSecondMoveState:
-				if b == ' ' {
+				if unicode.IsSpace(rune(b)) {
 					if runningBuffer != "" {
 						currentPGN.Moves = append(currentPGN.Moves, strings.TrimSpace(runningBuffer))
 						runningBuffer = ""
@@ -121,6 +122,9 @@ func parsePGNs(file *os.File) ([]PGN, error) {
 						currentState = NewSymbolState
 						continue
 					}
+
+					// Don't want to add spaces to runningBuffer.
+					continue
 				}
 
 				if b == '*' {
