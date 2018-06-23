@@ -4,8 +4,10 @@ import (
 	"errors"
 	"flag"
 	"log"
-	"os/exec"
 	"path/filepath"
+
+	"clanpj/lisao/cmd"
+	"clanpj/lisao/cmd/git"
 )
 
 var pathToRepo = flag.String("repo_path", "", "Path to lisao-bot git repo.")
@@ -27,6 +29,7 @@ func NewBuildInfo(commitHash, mainPath, outputPath string) BuildInfo {
 }
 
 // TODO(guy) add logging for stdout/stderr from exec.Run().
+// TODO(guy) workers should probably pass context down
 func DoBuild(work interface{}) error {
 	buildInfo, ok := work.(BuildInfo)
 	if !ok {
@@ -57,10 +60,9 @@ func (bi BuildInfo) checkoutCommit() error {
 		return err
 	}
 
-	cmd := exec.Command("git", "checkout", bi.commitHash)
-	cmd.Dir = absolutePath
-
-	return cmd.Run()
+	return git.
+		NewClient(absolutePath).
+		CheckoutCommit(bi.commitHash)
 }
 
 func (bi BuildInfo) buildMain() error {
@@ -71,8 +73,12 @@ func (bi BuildInfo) buildMain() error {
 		return err
 	}
 
-	cmd := exec.Command("go", "build", "-i", "-o", bi.outputPath, bi.mainPath)
-	cmd.Env = append(cmd.Env, "GOPATH="+absolutePath)
-	cmd.Dir = absolutePath
-	return cmd.Run()
+	return cmd.
+		NewCommand("go build").
+		WithFlag("-i").
+		SetParam("-o", bi.outputPath).
+		WithArg(bi.mainPath).
+		SetEnv("GOPATH", absolutePath).
+		CD(absolutePath).
+		Do()
 }
