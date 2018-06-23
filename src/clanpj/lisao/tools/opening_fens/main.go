@@ -4,12 +4,14 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"io"
 	"log"
 	"os"
 	"strings"
 	"unicode"
-	// dragon "github.com/Bubblyworld/dragontoothmg"
+
+	"github.com/notnil/chess"
 )
 
 var pathToPGN = flag.String("pgn_path", "", "Path to a file containing a list of PGNS to parse.")
@@ -37,7 +39,14 @@ func main() {
 	}
 
 	for _, pgn := range pgnList {
-		log.Printf("%+v", pgn)
+		fen, err := pgn.getFEN()
+		if err != nil {
+			log.Fatalf("Error getting fen: %v", err)
+		}
+
+		opening := strings.Replace(pgn.Opening, ",", ";", -1)
+		variation := strings.Replace(pgn.Variation, ",", ";", -1)
+		fmt.Printf("%s,%s,%s\n", opening, variation, fen)
 	}
 }
 
@@ -169,4 +178,17 @@ func (pgn *PGN) parseTag(tag string) {
 	default:
 		log.Printf("Unknown label: %s", label)
 	}
+}
+
+func (pgn *PGN) getFEN() (string, error) {
+	game := chess.NewGame()
+
+	for _, moveStr := range pgn.Moves {
+		err := game.MoveStr(moveStr)
+		if err != nil {
+			return "", err
+		}
+	}
+
+	return game.FEN(), nil
 }
