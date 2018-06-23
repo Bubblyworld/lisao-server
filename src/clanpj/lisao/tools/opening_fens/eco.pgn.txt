@@ -832,7 +832,7 @@ Re1 *
 [Opening "English"]
 [Variation "Nenarokov variation"]
 
-1. c4 e5 2. Nc3 Nc6 3. Nf3 Nf6 4. d4 exd4 5. Nxd4 Bb4 6. Bg5 h6 7. Bh4 
+1. c4 e5 2. Nc3 Nc6 3. Nf3 Nf6 4. d4 exd4 5. Nxd4 Bb4 6. Bg5 h6 7. Bh4
 Bxc3+ 8. bxc3 Ne5 *
 
 [ECO "A28"]
@@ -1444,7 +1444,7 @@ Qxd4 d6 9. Rd1 a6 10. b3 Nbd7 *
 [Opening "Benko gambit"]
 [Variation "Nescafe Frappe attack"]
 
-1. d4 Nf6 2. c4 c5 3. d5 b5 4. cxb5 a6 5. Nc3 axb5 6. e4 b4 7. Nb5 d6 8. 
+1. d4 Nf6 2. c4 c5 3. d5 b5 4. cxb5 a6 5. Nc3 axb5 6. e4 b4 7. Nb5 d6 8.
 Bc4 *
 
 [ECO "A58"]
@@ -1524,21 +1524,21 @@ Kxf1 g6 9. g3 Bg7 10. Kg2 O-O 11. Nf3 *
 [Opening "Benoni"]
 [Variation "fianchetto variation"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8.
 Bg2 O-O *
 
 [ECO "A63"]
 [Opening "Benoni"]
 [Variation "fianchetto, 9...Nbd7"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8.
 Bg2 O-O 9. O-O Nbd7 *
 
 [ECO "A64"]
 [Opening "Benoni"]
 [Variation "fianchetto, 11...Re8"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8.
 Bg2 O-O 9. O-O Nbd7 10. Nd2 a6 11. a4 Re8 *
 
 [ECO "A65"]
@@ -1564,21 +1564,21 @@ Bg2 O-O 9. O-O Nbd7 10. Nd2 a6 11. a4 Re8 *
 [Opening "Benoni"]
 [Variation "Taimanov variation"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8.
 Bb5+ *
 
 [ECO "A68"]
 [Opening "Benoni"]
 [Variation "four pawns attack"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8.
 Nf3 O-O *
 
 [ECO "A69"]
 [Opening "Benoni"]
 [Variation "four pawns attack, main line"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8.
 Nf3 O-O 9. Be2 Re8 *
 
 [ECO "A70"]
@@ -1591,70 +1591,70 @@ Nf3 O-O 9. Be2 Re8 *
 [Opening "Benoni"]
 [Variation "classical without 9.O-O"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 *
 
 [ECO "A71"]
 [Opening "Benoni"]
 [Variation "classical, 8.Bg5"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Bg5 *
 
 [ECO "A72"]
 [Opening "Benoni"]
 [Variation "classical without 9.O-O"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O *
 
 [ECO "A73"]
 [Opening "Benoni"]
 [Variation "classical, 9.O-O"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O 9. O-O *
 
 [ECO "A74"]
 [Opening "Benoni"]
 [Variation "classical, 9...a6, 10.a4"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O 9. O-O a6 10. a4 *
 
 [ECO "A75"]
 [Opening "Benoni"]
 [Variation "classical with ...a6 and 10...Bg4"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O 9. O-O a6 10. a4 Bg4 *
 
 [ECO "A76"]
 [Opening "Benoni"]
 [Variation "classical, 9...Re8"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O 9. O-O Re8 *
 
 [ECO "A77"]
 [Opening "Benoni"]
 [Variation "classical, 9...Re8, 10.Nd2"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O 9. O-O Re8 10. Nd2 *
 
 [ECO "A78"]
 [Opening "Benoni"]
 [Variation "classical with ...Re8 and ...Na6"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O 9. O-O Re8 10. Nd2 Na6 *
 
 [ECO "A79"]
 [Opening "Benoni"]
 [Variation "classical, 11.f3"]
 
-1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. 
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8.
 Be2 O-O 9. O-O Re8 10. Nd2 Na6 11. f3 *
 
 [ECO "A80"]
@@ -1911,7 +1911,7 @@ Be2 O-O 9. O-O Re8 10. Nd2 Na6 11. f3 *
 [Opening "Dutch"]
 [Variation "stonewall: Chekhover variation"]
 
-1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d5 7. Nc3 c6 8. 
+1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d5 7. Nc3 c6 8.
 Qc2 Qe8 9. Bg5 *
 
 [ECO "A96"]
@@ -1930,21 +1930,21 @@ Qc2 Qe8 9. Bg5 *
 [Opening "Dutch"]
 [Variation "Ilyin-Genevsky, Winter variation"]
 
-1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Qe8 8. 
+1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Qe8 8.
 Re1 *
 
 [ECO "A98"]
 [Opening "Dutch"]
 [Variation "Ilyin-Genevsky variation with Qc2"]
 
-1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Qe8 8. 
+1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Qe8 8.
 Qc2 *
 
 [ECO "A99"]
 [Opening "Dutch"]
 [Variation "Ilyin-Genevsky variation with b3"]
 
-1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Qe8 8. 
+1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Qe8 8.
 b3 *
 
 [ECO "B00"]
@@ -3134,21 +3134,21 @@ Qe2 b5 9. Bb3 Ra7 *
 [Opening "Sicilian"]
 [Variation "Pelikan, Bird variation"]
 
-1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6
 8. Na3 Be6 *
 
 [ECO "B33"]
 [Opening "Sicilian"]
 [Variation "Pelikan, Chelyabinsk variation"]
 
-1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6
 8. Na3 b5 *
 
 [ECO "B33"]
 [Opening "Sicilian"]
 [Variation "Sveshnikov variation"]
 
-1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6
 8. Na3 b5 9. Bxf6 gxf6 10. Nd5 f5 *
 
 [ECO "B34"]
@@ -3545,28 +3545,28 @@ Na3 d5 *
 [Opening "Sicilian"]
 [Variation "Richter-Rauzer, Rauzer attack, 7...Be7 defence, 9.f4"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7
 8. O-O-O O-O 9. f4 *
 
 [ECO "B64"]
 [Opening "Sicilian"]
 [Variation "Richter-Rauzer, Rauzer attack, Geller variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7
 8. O-O-O O-O 9. f4 e5 *
 
 [ECO "B65"]
 [Opening "Sicilian"]
 [Variation "Richter-Rauzer, Rauzer attack, 7...Be7 defence, 9...Nxd4"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7
 8. O-O-O O-O 9. f4 Nxd4 *
 
 [ECO "B65"]
 [Opening "Sicilian"]
 [Variation "Richter-Rauzer, Rauzer attack, 7...Be7 defence, 9...Nxd4"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7
 8. O-O-O O-O 9. f4 Nxd4 10. Qxd4 *
 
 [ECO "B66"]
@@ -3630,56 +3630,56 @@ O-O-O Bd7 9. f4 Be7 10. Nf3 b5 11. Bxf6 *
 [Opening "Sicilian"]
 [Variation "dragon, classical, Amsterdam variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. Qd2 *
 
 [ECO "B72"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Grigoriev variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. Qd2 O-O 9. O-O-O *
 
 [ECO "B72"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Nottingham variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. Nb3 *
 
 [ECO "B73"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, 8.O-O"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O *
 
 [ECO "B73"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Zollner gambit"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. f4 Qb6 10. e5 *
 
 [ECO "B73"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Richter variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. Qd2 *
 
 [ECO "B74"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, 9.Nb3"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. Nb3 *
 
 [ECO "B74"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Stockholm attack"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. Nb3 Be6 10. f4 Na5 11. f5 Bc4 12. Nxa5 Bxe2 13. Qxe2 Qxa5 14.
 g4 *
 
@@ -3687,28 +3687,28 @@ g4 *
 [Opening "Sicilian"]
 [Variation "dragon, classical, Spielmann variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. Nb3 Be6 10. f4 Na5 11. f5 Bc4 12. Bd3 *
 
 [ECO "B74"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Bernard defence"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. Nb3 Be6 10. f4 Na5 11. f5 Bc4 12. Bd3 Bxd3 13. cxd3 d5 *
 
 [ECO "B74"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Reti-Tartakower variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. Nb3 Be6 10. f4 Qc8 *
 
 [ECO "B74"]
 [Opening "Sicilian"]
 [Variation "dragon, classical, Alekhine variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6
 8. O-O O-O 9. Nb3 a5 *
 
 [ECO "B75"]
@@ -3824,14 +3824,14 @@ Qf3 *
 [Opening "Sicilian"]
 [Variation "modern Scheveningen, main line"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Be2 Nc6 7. O-O Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Be2 Nc6 7. O-O Be7
 8. Be3 O-O 9. f4 *
 
 [ECO "B83"]
 [Opening "Sicilian"]
 [Variation "modern Scheveningen, main line with Nb3"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Be2 Nc6 7. O-O Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Be2 Nc6 7. O-O Be7
 8. Be3 O-O 9. f4 Bd7 10. Nb3 *
 
 [ECO "B84"]
@@ -3902,7 +3902,7 @@ f4 Nc6 9. Be3 Be7 10. Qe1 O-O *
 [Opening "Sicilian"]
 [Variation "Sozin, Fischer variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Bc4 Nc6 7. Bb3 Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Bc4 Nc6 7. Bb3 Be7
 8. Be3 O-O 9. f4 *
 
 [ECO "B89"]
@@ -3915,7 +3915,7 @@ f4 Nc6 9. Be3 Be7 10. Qe1 O-O *
 [Opening "Sicilian"]
 [Variation "Velimirovic attack"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Bc4 Nc6 7. Be3 Be7 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Bc4 Nc6 7. Be3 Be7
 8. Qe2 *
 
 [ECO "B90"]
@@ -3995,7 +3995,7 @@ f4 Nc6 9. Be3 Be7 10. Qe1 O-O *
 [Opening "Sicilian"]
 [Variation "Najdorf, Polugayevsky, Simagin variation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 b5 8. 
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 b5 8.
 e5 dxe5 9. fxe5 Qc7 10. Qe2 *
 
 [ECO "B97"]
@@ -4428,7 +4428,7 @@ Qg4 O-O 9. Nf3 f6 *
 [Opening "French"]
 [Variation "MacCutcheon, Bogolyubov variation"]
 
-1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Bb4 5. exd5 Qxd5 6. Bxf6 gxf6 7. Qd2 
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Bb4 5. exd5 Qxd5 6. Bxf6 gxf6 7. Qd2
 Qa5 *
 
 [ECO "C12"]
@@ -4447,7 +4447,7 @@ Qa5 *
 [Opening "French"]
 [Variation "MacCutcheon, Grigoriev variation"]
 
-1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Bb4 5. e5 h6 6. exf6 hxg5 7. fxg7 Rg8 
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Bb4 5. e5 h6 6. exf6 hxg5 7. fxg7 Rg8
 8. h4 gxh4 9. Qg4 *
 
 [ECO "C12"]
@@ -4600,7 +4600,7 @@ Qg4 g6 *
 [Opening "French"]
 [Variation "classical, Stahlberg variation"]
 
-1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Be7 5. e5 Nfd7 6. Bxe7 Qxe7 7. f4 O-O 
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Be7 5. e5 Nfd7 6. Bxe7 Qxe7 7. f4 O-O
 8. Nf3 c5 9. Qd2 Nc6 10. O-O-O c4 *
 
 [ECO "C15"]
@@ -4860,7 +4860,7 @@ Qxg7 Rg8 9. Qxh7 cxd4 10. Ne2 *
 [Opening "Centre game"]
 [Variation "Kupreichik variation"]
 
-1. e4 e5 2. d4 exd4 3. Qxd4 Nc6 4. Qe3 Nf6 5. Nc3 Bb4 6. Bd2 O-O 7. O-O-O 
+1. e4 e5 2. d4 exd4 3. Qxd4 Nc6 4. Qe3 Nf6 5. Nc3 Bb4 6. Bd2 O-O 7. O-O-O
 Re8 8. Bc4 d6 9. Nh3 *
 
 [ECO "C22"]
@@ -5116,7 +5116,7 @@ exd5 Bg4 9. dxc6 *
 [Opening "Vienna"]
 [Variation "`Frankenstein-Dracula' variation"]
 
-1. e4 e5 2. Nc3 Nf6 3. Bc4 Nxe4 4. Qh5 Nd6 5. Bb3 Nc6 6. Nb5 g6 7. Qf3 f5 
+1. e4 e5 2. Nc3 Nf6 3. Bc4 Nxe4 4. Qh5 Nd6 5. Bb3 Nc6 6. Nb5 g6 7. Qf3 f5
 8. Qd5 Qe7 9. Nxc7+ Kd8 10. Nxa8 b6 *
 
 [ECO "C27"]
@@ -5376,7 +5376,7 @@ Qxf3 exf4 *
 [Opening "KGD"]
 [Variation "Falkbeer, Tarrasch variation"]
 
-1. e4 e5 2. f4 d5 3. exd5 e4 4. d3 Nf6 5. dxe4 Nxe4 6. Nf3 Bc5 7. Qe2 Bf5 
+1. e4 e5 2. f4 d5 3. exd5 e4 4. d3 Nf6 5. dxe4 Nxe4 6. Nf3 Bc5 7. Qe2 Bf5
 8. g4 O-O *
 
 [ECO "C32"]
@@ -5389,7 +5389,7 @@ Qxf3 exf4 *
 [Opening "KGD"]
 [Variation "Falkbeer, Charousek variation"]
 
-1. e4 e5 2. f4 d5 3. exd5 e4 4. d3 Nf6 5. dxe4 Nxe4 6. Qe2 Qxd5 7. Nd2 f5 
+1. e4 e5 2. f4 d5 3. exd5 e4 4. d3 Nf6 5. dxe4 Nxe4 6. Qe2 Qxd5 7. Nd2 f5
 8. g4 *
 
 [ECO "C32"]
@@ -5700,7 +5700,7 @@ Qxf3 exf4 *
 [Opening "KGA"]
 [Variation "Abbazia defence, Botvinnik variation"]
 
-1. e4 e5 2. f4 exf4 3. Nf3 d5 4. exd5 Nf6 5. Bb5+ c6 6. dxc6 bxc6 7. Bc4 
+1. e4 e5 2. f4 exf4 3. Nf3 d5 4. exd5 Nf6 5. Bb5+ c6 6. dxc6 bxc6 7. Bc4
 Nd5 *
 
 [ECO "C37"]
@@ -5743,7 +5743,7 @@ Nd5 *
 [Opening "KGA"]
 [Variation "Lolli gambit, Young variation"]
 
-1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 g4 5. Bxf7+ Kxf7 6. O-O gxf3 7. Qxf3 
+1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 g4 5. Bxf7+ Kxf7 6. O-O gxf3 7. Qxf3
 Qf6 8. d4 Qxd4+ 9. Be3 Qf6 10. Nc3 *
 
 [ECO "C37"]
@@ -5853,7 +5853,7 @@ Qf6 8. d4 Qxd4+ 9. Be3 Qf6 10. Nc3 *
 [Opening "KGA"]
 [Variation "Greco gambit"]
 
-1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. h4 h6 6. d4 d6 7. Nc3 c6 8. 
+1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. h4 h6 6. d4 d6 7. Nc3 c6 8.
 hxg5 hxg5 9. Rxh8 Bxh8 10. Ne5 *
 
 [ECO "C38"]
@@ -5877,7 +5877,7 @@ hxg5 hxg5 9. Rxh8 Bxh8 10. Ne5 *
 [Opening "KGA"]
 [Variation "Allgaier, Horny defence"]
 
-1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ng5 h6 6. Nxf7 Kxf7 7. Qxg4 Nf6 
+1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ng5 h6 6. Nxf7 Kxf7 7. Qxg4 Nf6
 8. Qxf4 Bd6 *
 
 [ECO "C39"]
@@ -5890,7 +5890,7 @@ hxg5 hxg5 9. Rxh8 Bxh8 10. Ne5 *
 [Opening "KGA"]
 [Variation "Allgaier, Cook variation"]
 
-1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ng5 h6 6. Nxf7 Kxf7 7. d4 d5 8. 
+1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ng5 h6 6. Nxf7 Kxf7 7. d4 d5 8.
 Bxf4 dxe4 9. Bc4+ Kg7 10. Be5+ *
 
 [ECO "C39"]
@@ -5934,7 +5934,7 @@ Bxd5+ Kg7 9. d4 *
 [Opening "KGA"]
 [Variation "Kieseritsky, long whip defence, Jaenisch variation"]
 
-1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 h5 6. Bc4 Rh7 7. d4 Bh6 8. 
+1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 h5 6. Bc4 Rh7 7. d4 Bh6 8.
 Nc3 *
 
 [ECO "C39"]
@@ -6075,7 +6075,7 @@ O-O *
 [Opening "Latvian"]
 [Variation "Behting variation"]
 
-1. e4 e5 2. Nf3 f5 3. Bc4 fxe4 4. Nxe5 Qg5 5. Nf7 Qxg2 6. Rf1 d5 7. Nxh8 
+1. e4 e5 2. Nf3 f5 3. Bc4 fxe4 4. Nxe5 Qg5 5. Nf7 Qxg2 6. Rf1 d5 7. Nxh8
 Nf6 *
 
 [ECO "C40"]
@@ -6176,7 +6176,7 @@ Nf6 *
 [Opening "Philidor"]
 [Variation "Berger variation"]
 
-1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Nxd4 Nf6 5. Nc3 Be7 6. Be2 O-O 7. O-O c5 
+1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Nxd4 Nf6 5. Nc3 Be7 6. Be2 O-O 7. O-O c5
 8. Nf3 Nc6 9. Bg5 Be6 10. Re1 *
 
 [ECO "C41"]
@@ -6268,7 +6268,7 @@ a4 exd4 *
 [Opening "Philidor"]
 [Variation "Hanham, Berger variation"]
 
-1. e4 e5 2. Nf3 d6 3. d4 Nd7 4. Bc4 c6 5. Ng5 Nh6 6. f4 Be7 7. O-O O-O 8. 
+1. e4 e5 2. Nf3 d6 3. d4 Nd7 4. Bc4 c6 5. Ng5 Nh6 6. f4 Be7 7. O-O O-O 8.
 c3 d5 *
 
 [ECO "C41"]
@@ -6322,35 +6322,35 @@ c3 d5 *
 [Opening "Petrov"]
 [Variation "classical attack, Chigorin variation"]
 
-1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6 
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6
 8. Re1 *
 
 [ECO "C42"]
 [Opening "Petrov"]
 [Variation "classical attack, Berger variation"]
 
-1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6 
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6
 8. Re1 Bg4 9. c3 f5 10. Nbd2 *
 
 [ECO "C42"]
 [Opening "Petrov"]
 [Variation "classical attack, Krause variation"]
 
-1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6 
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6
 8. Re1 Bg4 9. c3 f5 10. c4 *
 
 [ECO "C42"]
 [Opening "Petrov"]
 [Variation "classical attack, Maroczy variation"]
 
-1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6 
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6
 8. Re1 Bg4 9. c3 f5 10. c4 Bh4 *
 
 [ECO "C42"]
 [Opening "Petrov"]
 [Variation "classical attack, Jaenisch variation"]
 
-1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6 
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nc6
 8. c4 *
 
 [ECO "C42"]
@@ -6369,14 +6369,14 @@ c3 d5 *
 [Opening "Petrov"]
 [Variation "classical attack, Tarrasch variation"]
 
-1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O
 8. c4 Bg4 *
 
 [ECO "C42"]
 [Opening "Petrov"]
 [Variation "classical attack, Marshall trap"]
 
-1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O
 8. c4 Bg4 9. cxd5 f5 10. Re1 Bxh2+ *
 
 [ECO "C42"]
@@ -6641,7 +6641,7 @@ Kxf7 8. Qh5+ g6 9. Qxc5 d5 *
 [Opening "Scotch gambit"]
 [Variation "Hanneken variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Bb4+ 5. c3 dxc3 6. O-O cxb2 7. Bxb2 
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Bb4+ 5. c3 dxc3 6. O-O cxb2 7. Bxb2
 Nf6 8. Ng5 O-O 9. e5 Nxe5 *
 
 [ECO "C44"]
@@ -6930,7 +6930,7 @@ Qd4 8. O-O Qxe5 9. Re1 Be6 10. d4 Qd5 *
 [Opening "Four knights"]
 [Variation "Rubinstein counter-gambit Maroczy variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Nd4 5. Be2 Nxf3+ 6. Bxf3 Bc5 7. O-O 
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Nd4 5. Be2 Nxf3+ 6. Bxf3 Bc5 7. O-O
 O-O 8. d3 d6 9. Na4 Bb6 *
 
 [ECO "C48"]
@@ -6999,14 +6999,14 @@ O-O 8. d3 d6 9. Na4 Bb6 *
 [Opening "Four knights"]
 [Variation "symmetrical, Metger unpin"]
 
-1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 d6 7. Bg5 Bxc3 
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 d6 7. Bg5 Bxc3
 8. bxc3 Qe7 *
 
 [ECO "C49"]
 [Opening "Four knights"]
 [Variation "symmetrical, Capablanca variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 d6 7. Bg5 Bxc3 
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 d6 7. Bg5 Bxc3
 8. bxc3 Qe7 9. Re1 Nd8 10. d4 Bg4 *
 
 [ECO "C49"]
@@ -7381,7 +7381,7 @@ Qb3 *
 [Opening "Giuoco Piano"]
 [Variation "Tarrasch variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Qe7 5. d4 Bb6 6. O-O Nf6 7. a4 a6 8. 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Qe7 5. d4 Bb6 6. O-O Nf6 7. a4 a6 8.
 Re1 d6 9. h3 *
 
 [ECO "C53"]
@@ -7416,7 +7416,7 @@ Re1 d6 9. h3 *
 [Opening "Giuoco Piano"]
 [Variation "Ghulam Kassim variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. e5 Ne4 7. Bd5 Nxf2 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. e5 Ne4 7. Bd5 Nxf2
 8. Kxf2 dxc3+ 9. Kg3 *
 
 [ECO "C53"]
@@ -7440,7 +7440,7 @@ cxd4 Bb4+ *
 [Opening "Giuoco Piano"]
 [Variation "Krause variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Bd2 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Bd2
 Nxe4 8. Bxb4 Nxb4 9. Bxf7+ Kxf7 10. Qb3+ d5 11. Ne5+ Kf6 12. f3 *
 
 [ECO "C54"]
@@ -7459,56 +7459,56 @@ Nxe4 8. Bxb4 Nxb4 9. Bxf7+ Kxf7 10. Qb3+ d5 11. Ne5+ Kf6 12. f3 *
 [Opening "Giuoco Piano"]
 [Variation "Greco variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
 Nxe4 8. O-O Nxc3 *
 
 [ECO "C54"]
 [Opening "Giuoco Piano"]
 [Variation "Bernstein variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
 Nxe4 8. O-O Nxc3 9. bxc3 Bxc3 10. Qb3 d5 *
 
 [ECO "C54"]
 [Opening "Giuoco Piano"]
 [Variation "Aitken variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
 Nxe4 8. O-O Nxc3 9. bxc3 Bxc3 10. Ba3 *
 
 [ECO "C54"]
 [Opening "Giuoco Piano"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
 Nxe4 8. O-O Bxc3 *
 
 [ECO "C54"]
 [Opening "Giuoco Piano"]
 [Variation "Steinitz variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
 Nxe4 8. O-O Bxc3 9. bxc3 d5 10. Ba3 *
 
 [ECO "C54"]
 [Opening "Giuoco Piano"]
 [Variation "Moeller (Therkatz) attack"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
 Nxe4 8. O-O Bxc3 9. d5 *
 
 [ECO "C54"]
 [Opening "Giuoco Piano"]
 [Variation "Therkatz-Herzog variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
-Nxe4 8. O-O Bxc3 9. d5 Bf6 10. Re1 Ne7 11. Rxe4 d6 12. Bg5 Bxg5 13. Nxg5 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
+Nxe4 8. O-O Bxc3 9. d5 Bf6 10. Re1 Ne7 11. Rxe4 d6 12. Bg5 Bxg5 13. Nxg5
 O-O 14. Nxh7 *
 
 [ECO "C54"]
 [Opening "Giuoco Piano"]
 [Variation "Moeller, bayonet attack"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
 Nxe4 8. O-O Bxc3 9. d5 Bf6 10. Re1 Ne7 11. Rxe4 d6 12. g4 *
 
 [ECO "C55"]
@@ -7549,7 +7549,7 @@ Nxe4 8. O-O Bxc3 9. d5 Bf6 10. Re1 Ne7 11. Rxe4 d6 12. g4 *
 [ECO "C55"]
 [Opening "Two knights defence, Keidanz variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d4 exd4 5. e5 d5 6. Bb5 Ne4 7. Nxd4 Bc5 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d4 exd4 5. e5 d5 6. Bb5 Ne4 7. Nxd4 Bc5
 8. Nxc6 Bxf2+ 9. Kf1 Qh4 *
 
 [ECO "C55"]
@@ -7624,7 +7624,7 @@ Nxe4 8. O-O Bxc3 9. d5 Bf6 10. Re1 Ne7 11. Rxe4 d6 12. g4 *
 [Opening "two knights defence"]
 [Variation "Yurdansky attack"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d4 exd4 5. O-O Nxe4 6. Re1 d5 7. Bxd5 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d4 exd4 5. O-O Nxe4 6. Re1 d5 7. Bxd5
 Qxd5 8. Nc3 Qa5 9. Nxe4 Be6 10. Bg5 h6 11. Bh4 g5 12. Nf6+ Ke7 13. b4 *
 
 [ECO "C56"]
@@ -7660,7 +7660,7 @@ Qxd5 8. Nc3 Qa5 9. Nxe4 Be6 10. Bg5 h6 11. Bh4 g5 12. Nf6+ Ke7 13. b4 *
 [Opening "two knights defence"]
 [Variation "Fritz, Gruber variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Nd4 6. c3 b5 7. Bf1 Nxd5 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Nd4 6. c3 b5 7. Bf1 Nxd5
 8. Ne4 *
 
 [ECO "C57"]
@@ -7729,61 +7729,61 @@ Qe2 Nxc4 9. dxc4 Be7 *
 [Opening "two knights defence"]
 [Variation "Bogolyubov variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Qf3 *
 
 [ECO "C58"]
 [Opening "two knights defence"]
 [Variation "Paoli variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Qf3 Qc7 9. Bd3 *
 
 [ECO "C58"]
 [Opening "two knights defence"]
 [Variation "Colman variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Qf3 Rb8 *
 
 [ECO "C58"]
 [Opening "two knights defence"]
 [Variation "Blackburne variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Qf3 cxb5 *
 
 [ECO "C58"]
 [Opening "Two knights defence"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Be2 *
 
 [ECO "C59"]
 [Opening "Two knights defence"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Be2 h6 *
 
 [ECO "C59"]
 [Opening "two knights defence"]
 [Variation "Knorre variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Be2 h6 9. Nf3 e4 10. Ne5 Bd6 11. d4 Qc7 12. Bd2 *
 
 [ECO "C59"]
 [Opening "two knights defence"]
 [Variation "Goering variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Be2 h6 9. Nf3 e4 10. Ne5 Qc7 *
 
 [ECO "C59"]
 [Opening "two knights defence"]
 [Variation "Steinitz variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6
 bxc6 8. Be2 h6 9. Nh3 *
 
 [ECO "C60"]
@@ -8047,36 +8047,36 @@ bxc6 8. Be2 h6 9. Nh3 *
 [Opening "Ruy Lopez"]
 [Variation "Berlin defence, Rio de Janeiro variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6 
-bxc6 8. dxe5 Nb7 9. Nc3 O-O 10. Re1 Nc5 11. Nd4 Ne6 12. Be3 Nxd4 13. Bxd4 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6
+bxc6 8. dxe5 Nb7 9. Nc3 O-O 10. Re1 Nc5 11. Nd4 Ne6 12. Be3 Nxd4 13. Bxd4
 c5 *
 
 [ECO "C67"]
 [Opening "Ruy Lopez"]
 [Variation "Berlin defence, Zukertort variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6
 bxc6 8. dxe5 Nb7 9. c4 *
 
 [ECO "C67"]
 [Opening "Ruy Lopez"]
 [Variation "Berlin defence, Pillsbury variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6
 bxc6 8. dxe5 Nb7 9. b3 *
 
 [ECO "C67"]
 [Opening "Ruy Lopez"]
 [Variation "Berlin defence, Winawer attack"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6
 bxc6 8. dxe5 Nb7 9. Nd4 *
 
 [ECO "C67"]
 [Opening "Ruy Lopez"]
 [Variation "Berlin defence, Cordel variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6
 bxc6 8. dxe5 Nf5 *
 
 [ECO "C67"]
@@ -8215,7 +8215,7 @@ Bd7 *
 [Opening "Ruy Lopez"]
 [Variation "Noah's ark trap"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. d4 b5 6. Bb3 Nxd4 7. Nxd4 exd4 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. d4 b5 6. Bb3 Nxd4 7. Nxd4 exd4
 8. Qxd4 c5 *
 
 [ECO "C71"]
@@ -8312,7 +8312,7 @@ Bd7 *
 [Opening "Ruy Lopez"]
 [Variation "Wormald attack, Gruenfeld variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. Qe2 b5 6. Bb3 Be7 7. d4 d6 8. 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. Qe2 b5 6. Bb3 Be7 7. d4 d6 8.
 c3 Bg4 *
 
 [ECO "C77"]
@@ -8349,7 +8349,7 @@ c3 Bg4 *
 [Opening "Ruy Lopez"]
 [Variation "Rabinovich variation"]
 
-1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 d6 7. Ng5 d5 8. 
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 d6 7. Ng5 d5 8.
 exd5 Nd4 9. Re1 Bc5 10. Rxe5+ Kf8 *
 
 [ECO "C78"]
@@ -8734,7 +8734,7 @@ c3 d5 9. exd5 Nxd5 10. Nxe5 Nxe5 11. Rxe5 c6 *
 [Variation "Marshall, Kevitz variation"]
 
 1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 O-O 8.
-c3 d5 9. exd5 Nxd5 10. Nxe5 Nxe5 11. Rxe5 c6 12. Bxd5 cxd5 13. d4 Bd6 14. 
+c3 d5 9. exd5 Nxd5 10. Nxe5 Nxe5 11. Rxe5 c6 12. Bxd5 cxd5 13. d4 Bd6 14.
 Re3 *
 
 [ECO "C89"]
@@ -9499,7 +9499,7 @@ O-O O-O 9. Qe2 Ne4 10. g4 *
 [Opening "QGA"]
 [Variation "classical, Furman variation"]
 
-1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. Qe2 a6 7. dxc5 Bxc5 
+1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. Qe2 a6 7. dxc5 Bxc5
 8. O-O Nc6 9. e4 b5 10. e5 *
 
 [ECO "D26"]
@@ -9548,21 +9548,21 @@ O-O O-O 9. Qe2 Ne4 10. g4 *
 [Opening "QGA"]
 [Variation "classical, Flohr variation"]
 
-1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 b5 8. 
+1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 b5 8.
 Bb3 Nc6 9. Rd1 c4 10. Bc2 Nb4 11. Nc3 Nxc2 12. Qxc2 Bb7 13. d5 Qc7 *
 
 [ECO "D29"]
 [Opening "QGA"]
 [Variation "classical, 8...Bb7"]
 
-1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 b5 8. 
+1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 b5 8.
 Bb3 Bb7 *
 
 [ECO "D29"]
 [Opening "QGA"]
 [Variation "classical, Smyslov variation"]
 
-1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 b5 8. 
+1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Qe2 b5 8.
 Bb3 Bb7 9. Rd1 Nbd7 10. Nc3 Bd6 *
 
 [ECO "D30"]
@@ -9883,7 +9883,7 @@ O-O O-O 9. Bg5 Be6 10. Rc1 b6 *
 [Opening "QGD"]
 [Variation "Semi-Tarrasch, Levenfish variation"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 c5 5. e3 Nc6 6. Bd3 Bd6 7. O-O O-O 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 c5 5. e3 Nc6 6. Bd3 Bd6 7. O-O O-O 8.
 Qe2 Qe7 9. dxc5 Bxc5 10. e4 *
 
 [ECO "D40"]
@@ -10307,7 +10307,7 @@ Qc2 O-O 9. Bh4 *
 [Opening "QGD"]
 [Variation "Pillsbury attack"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 b6 7. Bd3 Bb7 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 b6 7. Bd3 Bb7 8.
 cxd5 exd5 9. Ne5 *
 
 [ECO "D55"]
@@ -10345,28 +10345,28 @@ Rc1 c6 9. Bd3 Nd7 10. O-O dxc4 11. Bxc4 *
 [Opening "QGD"]
 [Variation "Lasker defence, Teichmann variation"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8.
 Bxe7 Qxe7 9. Qc2 *
 
 [ECO "D56"]
 [Opening "QGD"]
 [Variation "Lasker defence, Russian variation"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8.
 Bxe7 Qxe7 9. Qc2 Nf6 10. Bd3 dxc4 11. Bxc4 c5 12. O-O Nc6 13. Rfd1 Bd7 *
 
 [ECO "D57"]
 [Opening "QGD"]
 [Variation "Lasker defence, main line"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8.
 Bxe7 Qxe7 9. cxd5 Nxc3 10. bxc3 *
 
 [ECO "D57"]
 [Opening "QGD"]
 [Variation "Lasker defence, Bernstein variation"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Ne4 8.
 Bxe7 Qxe7 9. cxd5 Nxc3 10. bxc3 exd5 11. Qb3 Qd6 *
 
 [ECO "D58"]
@@ -10379,14 +10379,14 @@ Bxe7 Qxe7 9. cxd5 Nxc3 10. bxc3 exd5 11. Qb3 Qd6 *
 [Opening "QGD"]
 [Variation "Tartakower (Makagonov-Bondarevsky) system, 8.cd Nxd5"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 b6 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 b6 8.
 cxd5 Nxd5 *
 
 [ECO "D59"]
 [Opening "QGD"]
 [Variation "Tartakower variation"]
 
-1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 b6 8. 
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 b6 8.
 cxd5 Nxd5 9. Bxe7 Qxe7 10. Nxd5 exd5 11. Rc1 Be6 *
 
 [ECO "D60"]
@@ -10569,7 +10569,7 @@ Bd3 dxc4 9. Bxc4 Nd5 10. Bxe7 Qxe7 11. O-O Nxc3 12. Rxc3 e5 13. Qc2 *
 [Variation "Orthodox defence, classical, 13.de"]
 
 1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 Nbd7 7. Rc1 c6 8.
-Bd3 dxc4 9. Bxc4 Nd5 10. Bxe7 Qxe7 11. O-O Nxc3 12. Rxc3 e5 13. dxe5 Nxe5 
+Bd3 dxc4 9. Bxc4 Nd5 10. Bxe7 Qxe7 11. O-O Nxc3 12. Rxc3 e5 13. dxe5 Nxe5
 14. Nxe5 Qxe5 *
 
 [ECO "D70"]
@@ -10766,7 +10766,7 @@ dxc5 *
 [Variation "exchange, Sokolsky variation"]
 
 1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Bc4 O-O
-8. Ne2 c5 9. O-O Nc6 10. Be3 cxd4 11. cxd4 Bg4 12. f3 Na5 13. Bd3 Be6 14. 
+8. Ne2 c5 9. O-O Nc6 10. Be3 cxd4 11. cxd4 Bg4 12. f3 Na5 13. Bd3 Be6 14.
 d5 *
 
 [ECO "D90"]
@@ -10915,21 +10915,21 @@ d5 *
 [Opening "Gruenfeld"]
 [Variation "Russian, Keres variation"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 dxc4 6. Qxc4 O-O 7. e4 Bg4 
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 dxc4 6. Qxc4 O-O 7. e4 Bg4
 8. Be3 Nfd7 9. Be2 Nb6 10. Qd3 Nc6 11. O-O-O *
 
 [ECO "D99"]
 [Opening "Gruenfeld defence"]
 [Variation "Smyslov, main line"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 dxc4 6. Qxc4 O-O 7. e4 Bg4 
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 dxc4 6. Qxc4 O-O 7. e4 Bg4
 8. Be3 Nfd7 9. Qb3 *
 
 [ECO "D99"]
 [Opening "Gruenfeld defence"]
 [Variation "Smyslov, Yugoslav variation"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 dxc4 6. Qxc4 O-O 7. e4 Bg4 
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 dxc4 6. Qxc4 O-O 7. e4 Bg4
 8. Be3 Nfd7 9. Qb3 c5 *
 
 [ECO "E00"]
@@ -11144,7 +11144,7 @@ Nbd2 b6 9. b3 a5 10. Bb2 Ba6 *
 [Opening "Queen's Indian"]
 [Variation "Averbakh variation"]
 
-1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. e3 Bb7 5. Bd3 c5 6. O-O Be7 7. b3 O-O 8. 
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. e3 Bb7 5. Bd3 c5 6. O-O Be7 7. b3 O-O 8.
 Bb2 cxd4 9. Nxd4 *
 
 [ECO "E15"]
@@ -11379,7 +11379,7 @@ cxd5 Nxd5 *
 [Opening "Nimzo-Indian"]
 [Variation "Saemisch, Capablanca variation"]
 
-1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. a3 Bxc3+ 5. bxc3 O-O 6. e3 c5 7. Bd3 Nc6 
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. a3 Bxc3+ 5. bxc3 O-O 6. e3 c5 7. Bd3 Nc6
 8. Ne2 b6 9. e4 Ne8 *
 
 [ECO "E30"]
@@ -11636,21 +11636,21 @@ Bxc4 Nbd7 *
 [Opening "Nimzo-Indian"]
 [Variation "4.e3, main line with 8...dc and 9...cd"]
 
-1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Nf3 d5 6. Bd3 c5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Nf3 d5 6. Bd3 c5 7. O-O Nc6 8.
 a3 dxc4 9. Bxc4 cxd4 *
 
 [ECO "E58"]
 [Opening "Nimzo-Indian"]
 [Variation "4.e3, main line with 8...Bxc3"]
 
-1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Nf3 d5 6. Bd3 c5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Nf3 d5 6. Bd3 c5 7. O-O Nc6 8.
 a3 Bxc3 9. bxc3 *
 
 [ECO "E59"]
 [Opening "Nimzo-Indian"]
 [Variation "4.e3, main line"]
 
-1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Nf3 d5 6. Bd3 c5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Nf3 d5 6. Bd3 c5 7. O-O Nc6 8.
 a3 Bxc3 9. bxc3 dxc4 10. Bxc4 *
 
 [ECO "E60"]
@@ -11768,7 +11768,7 @@ a3 Bxc3 9. bxc3 dxc4 10. Bxc4 *
 [Opening "King's Indian"]
 [Variation "fianchetto, Yugoslav Panno"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. Nf3 d6 5. g3 O-O 6. Bg2 c5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. Nf3 d6 5. g3 O-O 6. Bg2 c5 7. O-O Nc6 8.
 d5 *
 
 [ECO "E67"]
@@ -11911,7 +11911,7 @@ exd5 9. e5 *
 [Opening "King's Indian"]
 [Variation "Four pawns attack, main line"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f4 O-O 6. Be2 c5 7. Nf3 cxd4 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f4 O-O 6. Be2 c5 7. Nf3 cxd4 8.
 Nxd4 Nc6 9. Be3 *
 
 [ECO "E80"]
@@ -11960,7 +11960,7 @@ Nxd4 Nc6 9. Be3 *
 [Opening "King's Indian"]
 [Variation "Saemisch, Panno main line"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 Nc6 7. Nge2 a6 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 Nc6 7. Nge2 a6 8.
 Qd2 Rb8 *
 
 [ECO "E85"]
@@ -12071,7 +12071,7 @@ cxd5 *
 [Opening "King's Indian"]
 [Variation "Petrosian system, Keres variation"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. d5 Nbd7 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. d5 Nbd7 8.
 Bg5 h6 9. Bh4 g5 10. Bg3 Nh5 11. h4 *
 
 [ECO "E94"]
@@ -12116,27 +12116,26 @@ Re1 c6 9. Bf1 a5 *
 [Opening "King's Indian"]
 [Variation "orthodox, Aronin-Taimanov, bayonet attack"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8.
 d5 Ne7 9. b4 *
 
 [ECO "E98"]
 [Opening "King's Indian"]
 [Variation "orthodox, Aronin-Taimanov, 9.Ne1"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8.
 d5 Ne7 9. Ne1 *
 
 [ECO "E99"]
 [Opening "King's Indian"]
 [Variation "orthodox, Aronin-Taimanov, main line"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8.
 d5 Ne7 9. Ne1 Nd7 10. f3 f5 *
 
 [ECO "E99"]
 [Opening "King's Indian"]
 [Variation "orthodox, Aronin-Taimanov, Benko attack"]
 
-1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. 
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8.
 d5 Ne7 9. Ne1 Nd7 10. f3 f5 11. g4 *
-

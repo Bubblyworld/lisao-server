@@ -9,6 +9,7 @@ import (
 	"os"
 	"strings"
 	"unicode"
+	// dragon "github.com/Bubblyworld/dragontoothmg"
 )
 
 var pathToPGN = flag.String("pgn_path", "", "Path to a file containing a list of PGNS to parse.")
@@ -49,11 +50,9 @@ const (
 	ReadSecondMoveState = 6
 )
 
-const numerics = "0123456789"
-const alphas = "abcdefgh"
-
 func parsePGNs(file *os.File) ([]PGN, error) {
 	data := make([]byte, 1024)
+	var dataBytesRead int
 
 	var err error
 	var result []PGN
@@ -61,12 +60,16 @@ func parsePGNs(file *os.File) ([]PGN, error) {
 	var currentState = NewSymbolState
 	var runningBuffer string
 	for {
-		_, err = file.Read(data)
+		dataBytesRead, err = file.Read(data)
 		if err != nil {
 			break
 		}
 
-		for _, b := range data {
+		for i, b := range data {
+			if i >= dataBytesRead {
+				break
+			}
+
 			switch currentState {
 			case NewSymbolState:
 				switch b {
@@ -81,7 +84,7 @@ func parsePGNs(file *os.File) ([]PGN, error) {
 					currentState = ReadTagState
 				}
 
-				if strings.Contains(numerics, string(b)) {
+				if unicode.IsDigit(rune(b)) {
 					currentState = ReadMoveNumberState
 				}
 
@@ -93,7 +96,7 @@ func parsePGNs(file *os.File) ([]PGN, error) {
 			case ReadTagState:
 				if b == ']' {
 					currentState = NewSymbolState
-					currentPGN = parseTag(currentPGN, runningBuffer)
+					currentPGN.parseTag(runningBuffer)
 					runningBuffer = ""
 					continue
 				}
@@ -148,7 +151,7 @@ func parsePGNs(file *os.File) ([]PGN, error) {
 	return result, nil
 }
 
-func parseTag(pgn PGN, tag string) PGN {
+func (pgn *PGN) parseTag(tag string) {
 	parts := strings.Split(tag, "\"")
 	label := strings.Trim(parts[0], " ")
 	value := strings.Trim(parts[1], " ")
@@ -166,6 +169,4 @@ func parseTag(pgn PGN, tag string) PGN {
 	default:
 		log.Printf("Unknown label: %s", label)
 	}
-
-	return pgn
 }
