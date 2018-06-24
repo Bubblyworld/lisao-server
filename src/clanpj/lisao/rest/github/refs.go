@@ -10,6 +10,7 @@ type Ref struct {
 	Ref    string `json:"ref"`
 	NodeID string `json:"node_id"`
 	Url    string `json:"url"`
+	Object Object `json:"object"`
 }
 
 type Refs []Ref

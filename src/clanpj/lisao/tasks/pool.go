@@ -11,37 +11,36 @@ const workChannelCapacity = 20
 
 type ProcessFunc func(interface{}) error
 
-// A pool manages state of a pool of workers that read in tasks from a channel
+// A Pool manages state of a Pool of workers that read in tasks from a channel
 // and process them in some way.
-type pool struct {
+type Pool struct {
 	processFunc ProcessFunc
 	poolLabel   string
 	numWorkers  int
 
 	stopChan  chan bool
-	workChan  <-chan interface{}
+	workChan  chan interface{}
 	waitGroup *sync.WaitGroup
 
 	isRunning bool
 }
 
-func NewPool(poolLabel string, numWorkers int, processFunc ProcessFunc,
-	workChan <-chan interface{}) *pool {
+func NewPool(poolLabel string, numWorkers int, processFunc ProcessFunc) *Pool {
 
-	return &pool{
+	return &Pool{
 		processFunc: processFunc,
 		poolLabel:   poolLabel,
 		numWorkers:  numWorkers,
 
 		stopChan:  make(chan bool),
-		workChan:  workChan,
+		workChan:  make(chan interface{}, 10),
 		waitGroup: &sync.WaitGroup{},
 
 		isRunning: false,
 	}
 }
 
-func (p *pool) Run() {
+func (p *Pool) Run() {
 	p.isRunning = true
 
 	var workerStopChans []chan bool
@@ -70,7 +69,7 @@ func (p *pool) Run() {
 	}
 }
 
-func (p *pool) Stop() error {
+func (p *Pool) Stop() error {
 	if !p.isRunning {
 		return errors.New("pool: can't stop a pool that hasn't been started")
 	}
@@ -80,7 +79,11 @@ func (p *pool) Stop() error {
 	return nil
 }
 
-func (p *pool) workForever(workerIndex int, stopChan <-chan bool,
+func (p *Pool) PushWork(work interface{}) {
+	p.workChan <- work
+}
+
+func (p *Pool) workForever(workerIndex int, stopChan <-chan bool,
 	waitGroup *sync.WaitGroup) {
 
 	log.Printf("Pool %s: starting worker %d.", p.poolLabel, workerIndex)

@@ -15,13 +15,12 @@ func incrementFunc(i *int) ProcessFunc {
 
 func TestPool(t *testing.T) {
 	i := 1
-	workChan := make(chan interface{}, 10)
-	pool := NewPool("test_pool", 2, incrementFunc(&i), workChan)
+	pool := NewPool("test_pool", 2, incrementFunc(&i))
 
 	go pool.Run()
 	time.Sleep(time.Millisecond * 10)
-	workChan <- struct{}{}
-	workChan <- struct{}{}
+	pool.PushWork(struct{}{})
+	pool.PushWork(struct{}{})
 	time.Sleep(time.Millisecond * 10)
 
 	pool.Stop()
@@ -49,13 +48,12 @@ func fakeMutexFunc(mutex, failed *bool) ProcessFunc {
 func TestOneWorkerHasOneRoutine(t *testing.T) {
 	mutex := false
 	failed := false
-	workChan := make(chan interface{}, 10)
-	pool := NewPool("test_pool", 1, fakeMutexFunc(&mutex, &failed), workChan)
+	pool := NewPool("test_pool", 1, fakeMutexFunc(&mutex, &failed))
 	go pool.Run()
 
 	time.Sleep(time.Millisecond * 10)
-	workChan <- struct{}{}
-	workChan <- struct{}{}
+	pool.PushWork(struct{}{})
+	pool.PushWork(struct{}{})
 	time.Sleep(time.Millisecond * 20)
 
 	err := pool.Stop()
