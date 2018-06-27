@@ -7,27 +7,29 @@ import (
 	"strings"
 )
 
-var apiHost = "https://api.github.com/"
+var apiHostDefault = "https://api.github.com/"
 var ErrInternalServerError = errors.New("github: internal server error")
 
 // Client provides utilities for querying refs/tags in the given repo.
 type Client struct {
-	user   string
-	repo   string
-	client *http.Client
+	user    string
+	repo    string
+	client  *http.Client
+	apiHost string
 }
 
 func NewClient(user, repo string) *Client {
 	return &Client{
-		repo:   repo,
-		user:   user,
-		client: &http.Client{},
+		repo:    repo,
+		user:    user,
+		client:  &http.Client{},
+		apiHost: apiHostDefault,
 	}
 }
 
 func (c *Client) NewRequest(method, apiUrl string, params url.Values) (*http.Request, error) {
 	body := strings.NewReader(params.Encode())
-	url := apiHost + strings.Trim(apiUrl, "/")
+	url := c.apiHost + strings.Trim(apiUrl, "/")
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {
 		return nil, err

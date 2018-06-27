@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"clanpj/lisao/cmd"
 	"flag"
 	"io"
@@ -23,17 +24,21 @@ func main() {
 	// waitGroup.Wait()
 
 	logger := cmd.NewLogWriter()
-	command := cmd.
-		NewCommand("ls /Users/guy").
-		LogTo(logger)
+	defer logger.Close()
 
-	stdIn := command.GetStdIn()
-	stdOut := command.GetStdOut()
-	go io.Copy(stdIn, os.Stdin)
-	go io.Copy(os.Stdout, stdOut)
+	stdIn := bytes.NewBuffer([]byte{})
+
+	command := cmd.NewCommand("/Users/guy/Workspace/lisao-bot/bin/uci")
+	command.Stdout = logger
+	command.Stderr = logger
+	command.Stdin =
+
+	bufStdIn := bufio.NewWriter(stdIn)
+	bufStdIn.WriteString("uci\n")
+	bufStdIn.Flush()
 
 	err := command.Do()
 	if err != nil {
-		log.Printf("Error running command: %v", err)
+		log.Print(err)
 	}
 }

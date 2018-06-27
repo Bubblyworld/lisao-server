@@ -16,10 +16,10 @@ func (c Client) CheckoutCommit(hash string) error {
 	logWriter := cmd.NewLogWriter()
 	defer logWriter.Close()
 
-	return cmd.
-		NewCommand("git checkout").
-		WithArg(hash).
-		CD(c.repoPath).
-		LogTo(logWriter).
-		Do()
+	command := cmd.NewCommand("git checkout " + hash)
+	command.Dir = c.repoPath
+	command.Stdout = logWriter
+	command.Stderr = logWriter
+
+	return command.Run()
 }

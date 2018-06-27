@@ -72,13 +72,14 @@ func (bi BuildInfo) buildMain() error {
 		return err
 	}
 
-	return cmd.
-		NewCommand("go build").
-		WithFlag("-i").
-		SetParam("-o", bi.outputPath).
-		WithArg(bi.mainPath).
-		SetEnv("GOPATH", absolutePath).
-		CD(absolutePath).
-		LogTo(cmd.NewLogWriter()).
-		Do()
+	logWriter := cmd.NewLogWriter()
+	defer logWriter.Close()
+
+	command := cmd.NewCommand("go build -io " + bi.outputPath)
+	command.Dir = absolutePath
+	command.Args = append(command.Args, cmd.Env("GOPATH", absolutePath))
+	command.Stdout = logWriter
+	command.Stderr = logWriter
+
+	return command.Run()
 }
