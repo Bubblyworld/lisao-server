@@ -30,6 +30,7 @@ func (s *State) PollGithubForever(waitGroup *sync.WaitGroup) {
 			if !ok || oldCommit != ref.Object.Sha {
 				refToCommit[ref.Ref] = ref.Object.Sha
 
+				// TODO(guy) actually push the build
 				log.Printf("PUSHING BUILD FOR %s/%s", ref.Ref, ref.Object.Sha)
 			}
 		}
