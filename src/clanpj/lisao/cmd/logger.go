@@ -10,7 +10,7 @@ type LogWriter struct {
 	pipeReader *io.PipeReader
 	pipeWriter *io.PipeWriter
 
-	doneCh chan bool
+	doneCh chan error
 }
 
 // LogWriter returns an io.WriteCloser that log.Prints everything coming through.
@@ -20,7 +20,7 @@ func NewLogWriter() LogWriter {
 	logWriter := LogWriter{
 		pipeReader: r,
 		pipeWriter: w,
-		doneCh:     make(chan bool),
+		doneCh:     make(chan error),
 	}
 
 	go logWriter.copy()
@@ -30,11 +30,10 @@ func NewLogWriter() LogWriter {
 func (lw LogWriter) copy() {
 	bufReader := bufio.NewReader(lw.pipeReader)
 
-	// TODO(guy) don't swallow non-io.EOF errors. (or non ErrClosedPipe)
 	for {
 		line, err := bufReader.ReadString('\n')
 		if err != nil {
-			lw.doneCh <- true
+			lw.doneCh <- err
 			return
 		}
 
@@ -52,6 +51,5 @@ func (lw LogWriter) Close() error {
 		return err
 	}
 
-	<-lw.doneCh
-	return nil
+	return <-lw.doneCh
 }

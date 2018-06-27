@@ -16,16 +16,30 @@ type Command struct {
 
 	env   map[string]string
 	logTo io.Writer
+
+	stdOutPipeReader *io.PipeReader
+	stdOutPipeWriter *io.PipeWriter
+
+	stdInPipeReader *io.PipeReader
+	stdInPipeWriter *io.PipeWriter
 }
 
 func NewCommand(cmd string) Command {
 	cmdWords := strings.Split(cmd, " ")
+	stdOutPR, stdOutPW := io.Pipe()
+	stdInPR, stdInPW := io.Pipe()
 
 	return Command{
 		cmd:  cmdWords[0],
 		args: cmdWords[1:],
 
 		env: make(map[string]string),
+
+		stdOutPipeReader: stdOutPR,
+		stdOutPipeWriter: stdOutPW,
+
+		stdInPipeReader: stdInPR,
+		stdInPipeWriter: stdInPW,
 	}
 }
 
@@ -61,7 +75,21 @@ func (c Command) CD(dir string) Command {
 	return c
 }
 
+func (c Command) GetStdOut() *io.PipeReader {
+	return c.stdOutPipeReader
+}
+
+func (c Command) GetStdIn() *io.PipeWriter {
+	return c.stdInPipeWriter
+}
+
 func (c Command) Do() error {
+	defer func() {
+		// TODO(guy) handle errors here
+		c.stdInPipeWriter.Close()
+		c.stdOutPipeReader.Close()
+	}()
+
 	cmd := exec.Command(c.cmd, c.args...)
 	cmd.Dir = c.dir
 
@@ -69,20 +97,30 @@ func (c Command) Do() error {
 		cmd.Env = append(cmd.Env, k+"="+v)
 	}
 
-	if c.logTo != nil {
-		stdOut, err := cmd.StdoutPipe()
-		if err != nil {
-			return err
-		}
-
-		stdErr, err := cmd.StderrPipe()
-		if err != nil {
-			return err
-		}
-
-		go io.Copy(c.logTo, stdOut)
-		go io.Copy(c.logTo, stdErr)
+	stdOut, err := cmd.StdoutPipe()
+	if err != nil {
+		return err
 	}
+
+	stdErr, err := cmd.StderrPipe()
+	if err != nil {
+		return err
+	}
+
+	stdIn, err := cmd.StdinPipe()
+	if err != nil {
+		return err
+	}
+
+	stdOutSrc := stdOut.(io.Reader)
+	if c.logTo != nil {
+		go io.Copy(c.logTo, stdErr)
+
+		stdOutSrc = io.TeeReader(stdOutSrc, c.logTo)
+	}
+
+	go io.Copy(stdIn, c.stdInPipeReader)
+	go io.Copy(c.stdOutPipeWriter, stdOutSrc)
 
 	if err := cmd.Start(); err != nil {
 		return err
