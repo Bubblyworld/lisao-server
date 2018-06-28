@@ -29,7 +29,7 @@ func main() {
 		log.Print(err)
 	}
 
-	msg, err := client.GetMessage()
+	msg, err := client.GetLine()
 	if err != nil {
 		log.Printf("Error getting message: %v", err)
 	}

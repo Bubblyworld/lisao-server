@@ -93,7 +93,7 @@ func (c *Client) sendMessage(msg string) error {
 	return nil
 }
 
-func (c *Client) getMessage() (string, error) {
+func (c *Client) getLine() (string, error) {
 	msg, err := c.stdOutBuf.ReadString('\n')
 	if err != nil {
 		return "", err
