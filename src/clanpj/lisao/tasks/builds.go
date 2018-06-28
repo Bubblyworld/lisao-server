@@ -72,7 +72,7 @@ func (bi BuildInfo) buildMain() error {
 		return err
 	}
 
-	logWriter := cmd.NewLogWriter()
+	logWriter := cmd.NewLogWriter("tasks: ")
 	defer logWriter.Close()
 
 	command := cmd.NewCommand("go build -io " + bi.outputPath)

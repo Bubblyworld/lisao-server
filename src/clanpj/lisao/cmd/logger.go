@@ -7,17 +7,19 @@ import (
 )
 
 type LogWriter struct {
+	prefix string
+
 	pipeReader *io.PipeReader
 	pipeWriter *io.PipeWriter
-
-	doneCh chan error
+	doneCh     chan error
 }
 
 // LogWriter returns an io.WriteCloser that log.Prints everything coming through.
-func NewLogWriter() LogWriter {
+func NewLogWriter(prefix string) LogWriter {
 	r, w := io.Pipe()
 
 	logWriter := LogWriter{
+		prefix:     prefix,
 		pipeReader: r,
 		pipeWriter: w,
 		doneCh:     make(chan error),
@@ -37,7 +39,7 @@ func (lw LogWriter) copy() {
 			return
 		}
 
-		log.Print(line)
+		log.Print(lw.prefix + line)
 	}
 }
 

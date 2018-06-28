@@ -13,7 +13,7 @@ func NewClient(repoPath string) Client {
 }
 
 func (c Client) CheckoutCommit(hash string) error {
-	logWriter := cmd.NewLogWriter()
+	logWriter := cmd.NewLogWriter("git: ")
 	defer logWriter.Close()
 
 	command := cmd.NewCommand("git checkout " + hash)

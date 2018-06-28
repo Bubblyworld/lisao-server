@@ -1,11 +1,14 @@
 package uci
 
 import (
+	"bufio"
 	"clanpj/lisao/cmd"
 	"errors"
 	"fmt"
 	"io"
+	"os"
 	"os/exec"
+	"strings"
 	"sync"
 )
 
@@ -15,6 +18,8 @@ type Client struct {
 	mu             sync.Mutex
 	command        *exec.Cmd
 	stdInPipe      *io.PipeWriter
+	stdOutPipe     *io.PipeReader
+	stdOutBuf      *bufio.Reader
 	hasBeenStarted bool
 }
 
@@ -32,13 +37,19 @@ func (c *Client) Start() error {
 		return errors.New("uci: Tried to start a client that had already been started.")
 	}
 
-	// TODO(guy) check that the given file actually exists
-	logWriter := cmd.NewLogWriter()
+	if !fileExists(c.pathToBinary) {
+		return fmt.Errorf("uci: Path to binary isn't a file: %s", c.pathToBinary)
+	}
 	c.command = cmd.NewCommand(c.pathToBinary)
-	c.command.Stdout = logWriter
-	c.command.Stderr = logWriter
 
 	pipeReader, pipeWriter := io.Pipe()
+	logWriter := cmd.NewLogWriter("uci: ")
+	c.stdOutPipe = pipeReader
+	c.stdOutBuf = bufio.NewReader(pipeReader)
+	c.command.Stderr = logWriter
+	c.command.Stdout = io.MultiWriter(logWriter, pipeWriter)
+
+	pipeReader, pipeWriter = io.Pipe()
 	c.stdInPipe = pipeWriter
 	c.command.Stdin = pipeReader
 
@@ -61,6 +72,11 @@ func (c *Client) Stop() error {
 		return err
 	}
 
+	err = c.stdOutPipe.Close()
+	if err != nil {
+		return err
+	}
+
 	return c.command.Wait()
 }
 
@@ -75,4 +91,21 @@ func (c *Client) sendMessage(msg string) error {
 	}
 
 	return nil
+}
+
+func (c *Client) getMessage() (string, error) {
+	msg, err := c.stdOutBuf.ReadString('\n')
+	if err != nil {
+		return "", err
+	}
+
+	return strings.TrimSpace(msg), nil
+}
+
+func fileExists(path string) bool {
+	if _, err := os.Stat(path); err == os.ErrNotExist {
+		return false
+	}
+
+	return true
 }

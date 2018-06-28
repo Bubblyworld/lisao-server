@@ -2,6 +2,7 @@ package main
 
 import (
 	"clanpj/lisao/cmd/uci"
+	"fmt"
 	"log"
 )
 
@@ -27,6 +28,13 @@ func main() {
 	if err := client.SendUCI(); err != nil {
 		log.Print(err)
 	}
+
+	msg, err := client.GetMessage()
+	if err != nil {
+		log.Printf("Error getting message: %v", err)
+	}
+
+	fmt.Println(msg)
 
 	client.Stop()
 }

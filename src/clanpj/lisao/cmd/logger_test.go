@@ -11,7 +11,7 @@ func TestLogWriter(t *testing.T) {
 	buffer := bytes.NewBuffer([]byte{})
 	log.SetOutput(buffer)
 
-	logWriter := NewLogWriter()
+	logWriter := NewLogWriter("prefix: ")
 	logWriter.Write([]byte("Testing.\n"))
 	logWriter.Close()
 
