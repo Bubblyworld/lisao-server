@@ -73,5 +73,17 @@ func readyEngines(white, black *Client) error {
 }
 
 func combineErrors(a, b error) error {
+	if a == nil && b == nil {
+		return nil
+	}
+
+	if a == nil {
+		return b
+	}
+
+	if b == nil {
+		return a
+	}
+
 	return errors.New(a.Error() + " // " + b.Error())
 }
