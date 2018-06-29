@@ -21,6 +21,7 @@ func NewState() *State {
 	return &State{
 		githubClient: github.NewClient(*lisaoOwner, *lisaoRepo),
 
-		buildsPool: tasks.NewPool("builds", 1, tasks.DoBuild),
+		buildsPool:     tasks.NewPool("builds", 1, tasks.DoBuild),
+		tournamentPool: tasks.NewPool("tournaments", 2, tasks.DoTournament),
 	}
 }

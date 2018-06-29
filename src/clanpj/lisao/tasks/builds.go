@@ -32,7 +32,7 @@ func NewBuildInfo(commitHash, mainPath, outputPath string) BuildInfo {
 func DoBuild(work interface{}) error {
 	buildInfo, ok := work.(BuildInfo)
 	if !ok {
-		return errors.New("builds: received wrong type of work, should be BuildInfo")
+		return errors.New("builds: received wrong type of work")
 	}
 
 	err := buildInfo.checkoutCommit()

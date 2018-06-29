@@ -1,6 +1,7 @@
 package tasks
 
 import (
+	"clanpj/lisao/cmd/uci"
 	"errors"
 	"log"
 )
@@ -21,12 +22,28 @@ func NewTournament(pathToWhite, pathToBlack string, numGames int) Tournament {
 }
 
 func DoTournament(work interface{}) error {
-	tournament, ok := work.(Tournament)
+	t, ok := work.(Tournament)
 	if !ok {
-		return errors.New("tournaments: received wrong type of work, should be Tournament")
+		return errors.New("tournaments: received wrong type of work")
 	}
 
-	log.Print(tournament)
+	white := uci.NewClient(t.pathToWhiteEngine, nil)
+	black := uci.NewClient(t.pathToBlackEngine, nil)
+
+	var games []*uci.Game
+	for i := 0; i < t.numberOfGames; i++ {
+		game, err := uci.PlayGame(&white, &black)
+		if err != nil {
+			return err
+		}
+
+		games = append(games, game)
+	}
+
+	// TODO(guy) push the results into mysql in some format.
+	for _, game := range games {
+		log.Print(game.GetFinalFEN())
+	}
 
 	return nil
 }

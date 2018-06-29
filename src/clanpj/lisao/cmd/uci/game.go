@@ -3,15 +3,31 @@ package uci
 import (
 	"errors"
 	"log"
+
+	"github.com/notnil/chess"
 )
 
 type Game struct {
 	moves []string
 }
 
+func (g Game) GetFinalFEN() (string, error) {
+	game := chess.NewGame()
+
+	for _, move := range g.moves {
+		err := game.MoveStr(move)
+		if err != nil {
+			return "", err
+		}
+	}
+
+	return game.FEN(), nil
+}
+
+// TODO(guy) get PGN strings
+
 // PlayGame starts both clients and has them play a game with each other.
-// TODO(guy) support for start options, time management, can we have clients
-// replay each other? I.e. reset their pipes and such.
+// TODO(guy) support for start options, time management, etc
 func PlayGame(white, black *Client) (*Game, error) {
 	defer func() {
 		err := stopEngines(white, black)
