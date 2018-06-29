@@ -43,7 +43,7 @@ func (c *Client) Start() error {
 	c.command = cmd.NewCommand(c.pathToBinary)
 
 	pipeReader, pipeWriter := io.Pipe()
-	logWriter := cmd.NewLogWriter("uci: ")
+	logWriter := cmd.NewLogWriter("uci/client: ")
 	c.stdOutPipe = pipeReader
 	c.stdOutBuf = bufio.NewReader(pipeReader)
 	c.command.Stderr = logWriter
