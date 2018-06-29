@@ -19,10 +19,17 @@ func main() {
 	//
 	// waitGroup.Wait()
 
-	white := uci.NewClient("/Users/guy/Workspace/lisao-bot/bin/uci")
-	black := uci.NewClient("/Users/guy/Workspace/lisao-bot/bin/uci")
+	white := uci.NewClient("/Users/guy/Workspace/lisao-bot/bin/uci", nil)
+	black := uci.NewClient("/Users/guy/Workspace/lisao-bot/bin/uci", nil)
 
 	game, err := uci.PlayGame(&white, &black)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Printf("Moves: %+v", game)
+
+	game, err = uci.PlayGame(&white, &black)
 	if err != nil {
 		log.Fatal(err)
 	}

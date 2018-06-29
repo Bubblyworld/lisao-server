@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -14,16 +15,17 @@ import (
 
 type Client struct {
 	pathToBinary string
+	logTo        io.Writer
 
-	mu             sync.Mutex
-	command        *exec.Cmd
-	stdInPipe      *io.PipeWriter
-	stdOutPipe     *io.PipeReader
-	stdOutBuf      *bufio.Reader
-	hasBeenStarted bool
+	mu         sync.Mutex
+	command    *exec.Cmd
+	stdInPipe  *io.PipeWriter
+	stdOutPipe *io.PipeReader
+	stdOutBuf  *bufio.Reader
+	isRunning  bool
 }
 
-func NewClient(pathToBinary string) Client {
+func NewClient(pathToBinary string, logTo io.Writer) Client {
 	return Client{
 		pathToBinary: pathToBinary,
 	}
@@ -33,21 +35,28 @@ func (c *Client) Start() error {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 
-	if c.hasBeenStarted {
-		return errors.New("uci: Tried to start a client that had already been started.")
+	if c.isRunning {
+		return errors.New("uci: tried to start a client that is running")
 	}
 
 	if !fileExists(c.pathToBinary) {
-		return fmt.Errorf("uci: Path to binary isn't a file: %s", c.pathToBinary)
+		log.Printf("uci: Path to binary isn't a file: %s", c.pathToBinary)
+		return fmt.Errorf("uci: path to binary isn't a file")
 	}
 	c.command = cmd.NewCommand(c.pathToBinary)
 
 	pipeReader, pipeWriter := io.Pipe()
-	logWriter := cmd.NewLogWriter("uci/client: ")
 	c.stdOutPipe = pipeReader
 	c.stdOutBuf = bufio.NewReader(pipeReader)
-	c.command.Stderr = logWriter
-	c.command.Stdout = io.MultiWriter(logWriter, pipeWriter)
+
+	if c.logTo != nil {
+		c.command.Stderr = c.logTo
+	}
+
+	c.command.Stdout = pipeWriter
+	if c.logTo != nil {
+		c.command.Stdout = io.MultiWriter(c.logTo, c.command.Stdout)
+	}
 
 	pipeReader, pipeWriter = io.Pipe()
 	c.stdInPipe = pipeWriter
@@ -58,7 +67,7 @@ func (c *Client) Start() error {
 		return err
 	}
 
-	c.hasBeenStarted = true
+	c.isRunning = true
 	return nil
 }
 
@@ -77,7 +86,13 @@ func (c *Client) Stop() error {
 		return err
 	}
 
-	return c.command.Wait()
+	err = c.command.Wait()
+	if err != nil {
+		return err
+	}
+
+	c.isRunning = false
+	return nil
 }
 
 func (c *Client) sendMessage(msg string) error {

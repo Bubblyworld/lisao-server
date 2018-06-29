@@ -13,7 +13,8 @@ var lisaoOwner = flag.String("repo_owner", "Bubblyworld", "Lisao bot repo owner.
 type State struct {
 	githubClient *github.Client
 
-	buildsPool *tasks.Pool
+	buildsPool     *tasks.Pool
+	tournamentPool *tasks.Pool
 }
 
 func NewState() *State {
