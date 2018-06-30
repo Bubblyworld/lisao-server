@@ -66,6 +66,7 @@ func (g Game) GetPGN() (string, error) {
 		return "", err
 	}
 
+	chess.UseNotation(chess.AlgebraicNotation{})(game)
 	return game.String(), nil
 }
 

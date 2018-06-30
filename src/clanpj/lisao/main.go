@@ -20,6 +20,10 @@ func main() {
 	go runPool(state.buildsPool, &waitGroup)
 	go runPool(state.tournamentPool, &waitGroup)
 
+	engine := "/Users/guy/Workspace/lisao-bot/bin/uci"
+	tournament := tasks.NewTournament(engine, engine, 1)
+	state.tournamentPool.PushWork(tournament)
+
 	waitGroup.Wait()
 }
 
