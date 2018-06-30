@@ -122,11 +122,11 @@ func playGame(white, black *Client, startFEN string) (*Game, error) {
 			return nil, err
 		}
 
+		game.moves = append(game.moves, bestMove.Move)
+
 		if chessGame.Outcome() != chess.NoOutcome {
 			break
 		}
-
-		game.moves = append(game.moves, bestMove.Move)
 	}
 
 	game.Outcome = convertOutcome(chessGame.Outcome())
