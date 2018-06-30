@@ -67,13 +67,7 @@ func (g Game) GetLatestFEN() (string, error) {
 }
 
 func (g Game) GetPGN() (string, error) {
-	game, err := convertGame(g)
-	if err != nil {
-		return "", err
-	}
-
-	chess.UseNotation(chess.AlgebraicNotation{})(game)
-	return game.String(), nil
+	return convertGameToPGN(g)
 }
 
 // PlayGame starts both clients and has them play a game with each other.
