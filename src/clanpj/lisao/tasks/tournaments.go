@@ -10,15 +10,22 @@ type Tournament struct {
 	pathToWhiteEngine string
 	pathToBlackEngine string
 
-	numberOfGames int
+	gameConfigs []GameConfig
 }
 
-func NewTournament(pathToWhite, pathToBlack string, numGames int) Tournament {
+type GameConfig struct {
+	StartFEN string
+}
+
+func NewTournament(pathToWhite, pathToBlack string) Tournament {
 	return Tournament{
 		pathToBlackEngine: pathToBlack,
 		pathToWhiteEngine: pathToWhite,
-		numberOfGames:     numGames,
 	}
+}
+
+func (t *Tournament) AddGame(game GameConfig) {
+	t.gameConfigs = append(t.gameConfigs, game)
 }
 
 func DoTournament(work interface{}) error {
@@ -31,8 +38,8 @@ func DoTournament(work interface{}) error {
 	black := uci.NewClient(t.pathToBlackEngine, nil)
 
 	var games []*uci.Game
-	for i := 0; i < t.numberOfGames; i++ {
-		game, err := uci.PlayGame(&white, &black)
+	for _, config := range t.gameConfigs {
+		game, err := uci.PlayGame(&white, &black, config.StartFEN)
 		if err != nil {
 			return err
 		}
@@ -42,7 +49,12 @@ func DoTournament(work interface{}) error {
 
 	// TODO(guy) push the results into mysql in some format.
 	for _, game := range games {
-		log.Print(game.GetPGN())
+		pgn, err := game.GetPGN()
+		if err != nil {
+			return err
+		}
+
+		log.Print(pgn)
 	}
 
 	return nil

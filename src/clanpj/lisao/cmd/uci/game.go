@@ -33,12 +33,18 @@ func convertOutcome(o chess.Outcome) Outcome {
 }
 
 type Game struct {
-	moves   []string
-	Outcome Outcome
+	startFEN string
+	moves    []string
+	Outcome  Outcome
 }
 
 func convertGame(g Game) (*chess.Game, error) {
-	game := chess.NewGame()
+	chessFEN, err := chess.FEN(g.startFEN)
+	if err != nil {
+		return nil, err
+	}
+
+	game := chess.NewGame(chessFEN)
 	chess.UseNotation(chess.LongAlgebraicNotation{})(game)
 
 	for _, move := range g.moves {
@@ -72,7 +78,7 @@ func (g Game) GetPGN() (string, error) {
 
 // PlayGame starts both clients and has them play a game with each other.
 // TODO(guy) support for start options, time management, etc
-func PlayGame(white, black *Client) (*Game, error) {
+func PlayGame(white, black *Client, startFEN string) (*Game, error) {
 	defer func() {
 		err := stopEngines(white, black)
 		if err != nil {
@@ -92,14 +98,17 @@ func PlayGame(white, black *Client) (*Game, error) {
 		return nil, err
 	}
 
-	return playGame(white, black)
+	return playGame(white, black, startFEN)
 }
 
-func playGame(white, black *Client) (*Game, error) {
+func playGame(white, black *Client, startFEN string) (*Game, error) {
 	var game Game
+	game.startFEN = startFEN
 
-	chessGame := chess.NewGame()
-	chess.UseNotation(chess.LongAlgebraicNotation{})(chessGame)
+	chessGame, err := convertGame(game)
+	if err != nil {
+		return nil, err
+	}
 
 	for moveNum := 1; ; moveNum++ {
 		currentPlayer := white
