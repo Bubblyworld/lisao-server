@@ -7,8 +7,34 @@ import (
 	"github.com/notnil/chess"
 )
 
+type Outcome int
+
+const (
+	NoOutcome Outcome = 0
+	WhiteWon  Outcome = 1
+	BlackWon  Outcome = 2
+	Draw      Outcome = 3
+)
+
+func convertOutcome(o chess.Outcome) Outcome {
+	switch o {
+	case chess.WhiteWon:
+		return WhiteWon
+
+	case chess.BlackWon:
+		return BlackWon
+
+	case chess.Draw:
+		return Draw
+
+	default:
+		return NoOutcome
+	}
+}
+
 type Game struct {
-	moves []string
+	moves   []string
+	Outcome Outcome
 }
 
 func convertGame(g Game) (*chess.Game, error) {
@@ -71,8 +97,10 @@ func PlayGame(white, black *Client) (*Game, error) {
 func playGame(white, black *Client) (*Game, error) {
 	var game Game
 
-	// TODO(guy) break on game over, not random number
-	for moveNum := 1; moveNum < 10; moveNum++ {
+	chessGame := chess.NewGame()
+	chess.UseNotation(chess.LongAlgebraicNotation{})(chessGame)
+
+	for moveNum := 1; ; moveNum++ {
 		currentPlayer := white
 		if moveNum%2 == 0 {
 			currentPlayer = black
@@ -83,9 +111,21 @@ func playGame(white, black *Client) (*Game, error) {
 			return nil, err
 		}
 
+		// Validate the move and check endgame conditions.
+		// TODO(guy) support draws
+		err = chessGame.MoveStr(bestMove.Move)
+		if err != nil {
+			return nil, err
+		}
+
+		if chessGame.Outcome() != chess.NoOutcome {
+			break
+		}
+
 		game.moves = append(game.moves, bestMove.Move)
 	}
 
+	game.Outcome = convertOutcome(chessGame.Outcome())
 	return &game, nil
 }
 
