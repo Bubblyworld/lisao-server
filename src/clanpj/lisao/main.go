@@ -22,6 +22,12 @@ func main() {
 
 	engine := "/Users/guy/Workspace/lisao-bot/bin/uci"
 	tournament := tasks.NewTournament(engine, engine)
+	gameConfig := tasks.GameConfig{
+		StartFEN: "rnbqkbnr/pppppppp/8/8/P7/8/1PPPPPPP/RNBQKBNR b KQkq a3 0 1", // Ware opening
+	}
+
+	tournament.AddGame(gameConfig)
+
 	state.tournamentPool.PushWork(tournament)
 
 	waitGroup.Wait()

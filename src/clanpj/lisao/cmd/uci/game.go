@@ -110,13 +110,13 @@ func playGame(white, black *Client, startFEN string) (*Game, error) {
 		return nil, err
 	}
 
-	for moveNum := 1; ; moveNum++ {
+	for {
 		currentPlayer := white
-		if moveNum%2 == 0 {
+		if chessGame.Position().Turn() == chess.Black {
 			currentPlayer = black
 		}
 
-		bestMove, err := currentPlayer.PlayFrom(game.moves)
+		bestMove, err := currentPlayer.PlayFrom(startFEN, game.moves)
 		if err != nil {
 			return nil, err
 		}

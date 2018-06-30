@@ -9,7 +9,7 @@ const uciTimeout = time.Second * 10
 
 // TODO(guy) all these things should have timeout contexts, and we should
 // log all errors, especially if there are false positives for ErrIncorrectlyFormatted
-// in particular, this would make implementation of time control trivial.
+// I think this would make implementation of time control trivial.
 
 // SendUCI sends the inital UCI handshake and waits for the id, config state.
 func (c *Client) DoHandshake() error {
@@ -65,8 +65,14 @@ func (c *Client) EnsureReadiness() error {
 
 // PlayFrom sends the engine the current movelist and waits for it to make a
 // move.
-func (c *Client) PlayFrom(moves []string) (*BestMoveMsg, error) {
-	msg := "position startpos"
+func (c *Client) PlayFrom(startFEN string, moves []string) (*BestMoveMsg, error) {
+	msg := "position"
+	if startFEN == "startpos" {
+		msg += " startpos"
+	} else {
+		msg += " fen " + startFEN
+	}
+
 	if len(moves) > 0 {
 		msg += " moves " + strings.Join(moves, " ")
 	}
