@@ -1,6 +1,7 @@
 package main
 
 import (
+	"clanpj/lisao/tasks"
 	"flag"
 	"sync"
 )
@@ -14,8 +15,17 @@ func main() {
 	state := NewState()
 	waitGroup := sync.WaitGroup{}
 
-	waitGroup.Add(1)
+	waitGroup.Add(3)
 	go state.PollGithubForever(&waitGroup)
+	go runPool(state.buildsPool, &waitGroup)
+	go runPool(state.tournamentPool, &waitGroup)
 
 	waitGroup.Wait()
+}
+
+func runPool(pool *tasks.Pool, waitGroup *sync.WaitGroup) {
+	// This should never happen.
+	defer waitGroup.Done()
+
+	pool.Run()
 }

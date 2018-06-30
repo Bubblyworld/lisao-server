@@ -11,20 +11,37 @@ type Game struct {
 	moves []string
 }
 
-func (g Game) GetFinalFEN() (string, error) {
+func convertGame(g Game) (*chess.Game, error) {
 	game := chess.NewGame()
+	chess.UseNotation(chess.LongAlgebraicNotation{})(game)
 
 	for _, move := range g.moves {
 		err := game.MoveStr(move)
 		if err != nil {
-			return "", err
+			return nil, err
 		}
+	}
+
+	return game, nil
+}
+
+func (g Game) GetLatestFEN() (string, error) {
+	game, err := convertGame(g)
+	if err != nil {
+		return "", err
 	}
 
 	return game.FEN(), nil
 }
 
-// TODO(guy) get PGN strings
+func (g Game) GetPGN() (string, error) {
+	game, err := convertGame(g)
+	if err != nil {
+		return "", err
+	}
+
+	return game.String(), nil
+}
 
 // PlayGame starts both clients and has them play a game with each other.
 // TODO(guy) support for start options, time management, etc

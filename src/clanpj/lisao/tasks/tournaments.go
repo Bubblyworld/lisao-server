@@ -42,7 +42,7 @@ func DoTournament(work interface{}) error {
 
 	// TODO(guy) push the results into mysql in some format.
 	for _, game := range games {
-		log.Print(game.GetFinalFEN())
+		log.Print(game.GetPGN())
 	}
 
 	return nil
