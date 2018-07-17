@@ -110,7 +110,11 @@ func playGame(white, black *Client, startFEN string) (*Game, error) {
 			currentPlayer = black
 		}
 
-		bestMove, err := currentPlayer.PlayFrom(startFEN, game.moves)
+		if err := currentPlayer.SetPosition(startFEN, game.moves); err != nil {
+			return nil, err
+		}
+
+		bestMove, err := currentPlayer.Search(SearchOptions{})
 		if err != nil {
 			return nil, err
 		}

@@ -14,8 +14,9 @@ import (
 )
 
 var enginePath = flag.String("engine", "", "Path the the UCI engine binary.")
-var startingFEN = flag.String("fen", "", "Initial FEN position for the engine.")
-var options = flag.String("options", "depth=7", "Comma-separated list of engine options to set, in the format \"OP1=VAL1,OP2=VAL2\".")
+var startingFEN = flag.String("fen", "startpos", "Initial FEN position for the engine.")
+var options = flag.String("options", "", "Comma-separated list of engine options to set, in the format \"OP1=VAL1,OP2=VAL2\".")
+var depth = flag.Int("depth", 7, "Depth")
 
 func main() {
 	flag.Parse()
@@ -26,6 +27,10 @@ func main() {
 	fatalOnErr(engine.EnsureReadiness)
 
 	for _, option := range strings.Split(*options, ",") {
+		if option == "" {
+			continue
+		}
+
 		option = strings.TrimSpace(option)
 		optionTokens := strings.Split(option, "=")
 
@@ -49,16 +54,19 @@ func fatalOnErr(fn func() error) {
 	}
 }
 
-func setOptionFn(engine uci.Client, name, value string) func() error {
+func setOptionFn(engine *uci.Client, name, value string) func() error {
 	return func() error {
 		return engine.SetOption(name, value)
 	}
 }
 
-func playFromFn(engine uci.Client, fen string) func() error {
+func playFromFn(engine *uci.Client, fen string) func() error {
 	return func() error {
-		_, err := engine.PlayFrom(fen, nil)
+		if err := engine.SetPosition(fen, nil); err != nil {
+			return err
+		}
 
+		_, err := engine.Search(uci.SearchOptions{*depth})
 		return err
 	}
 }

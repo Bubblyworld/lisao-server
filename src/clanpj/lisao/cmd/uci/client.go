@@ -25,9 +25,10 @@ type Client struct {
 	isRunning  bool
 }
 
-func NewClient(pathToBinary string, logTo io.Writer) Client {
-	return Client{
+func NewClient(pathToBinary string, logTo io.Writer) *Client {
+	return &Client{
 		pathToBinary: pathToBinary,
+		logTo:        logTo,
 	}
 }
 

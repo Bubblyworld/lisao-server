@@ -3,10 +3,7 @@ package uci
 import (
 	"fmt"
 	"strings"
-	"time"
 )
-
-const uciTimeout = time.Second * 10
 
 // TODO(guy) all these things should have timeout contexts, and we should
 // log all errors, especially if there are false positives for ErrIncorrectlyFormatted
@@ -72,9 +69,8 @@ func (c *Client) SetOption(name, value string) error {
 	return c.sendMessage(msg)
 }
 
-// PlayFrom sends the engine the current movelist and waits for it to make a
-// move.
-func (c *Client) PlayFrom(startFEN string, moves []string) (*BestMoveMsg, error) {
+// PlayFrom sets the engine's starting position for a search.
+func (c *Client) SetPosition(startFEN string, moves []string) error {
 	msg := "position"
 	if startFEN == "startpos" {
 		msg += " startpos"
@@ -86,13 +82,21 @@ func (c *Client) PlayFrom(startFEN string, moves []string) (*BestMoveMsg, error)
 		msg += " moves " + strings.Join(moves, " ")
 	}
 
-	err := c.sendMessage(msg)
-	if err != nil {
-		return nil, err
+	return c.sendMessage(msg)
+}
+
+type SearchOptions struct {
+	Depth int
+}
+
+// Search instructs the engine to look for the best move in the position.
+func (c *Client) Search(opts SearchOptions) (*BestMoveMsg, error) {
+	msg := "go"
+	if opts.Depth != 0 {
+		msg += fmt.Sprintf(" depth %d", opts.Depth)
 	}
 
-	// TODO(guy) pull out into separate function so we can add options etc.
-	err = c.sendMessage("go")
+	err := c.sendMessage(msg)
 	if err != nil {
 		return nil, err
 	}
