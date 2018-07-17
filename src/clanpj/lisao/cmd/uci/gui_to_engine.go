@@ -1,6 +1,7 @@
 package uci
 
 import (
+	"fmt"
 	"strings"
 	"time"
 )
@@ -61,6 +62,14 @@ func (c *Client) EnsureReadiness() error {
 			return nil
 		}
 	}
+}
+
+// SetOption sets a UCI option in the engine.
+// TODO(guy): keep a list of valid options and error if invalid is passed in
+func (c *Client) SetOption(name, value string) error {
+	msg := fmt.Sprintf("setoption name %s value %s", name, value)
+
+	return c.sendMessage(msg)
 }
 
 // PlayFrom sends the engine the current movelist and waits for it to make a
