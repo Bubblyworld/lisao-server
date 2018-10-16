@@ -116,3 +116,32 @@ func (c *Client) Search(opts SearchOptions) (*BestMoveMsg, error) {
 		}
 	}
 }
+
+// Get the engine evaluation configuration
+func (c *Client) GetEvalConfig() (*EvalConfigMsg, error) {
+	msg := "getevalconfig"
+
+	err := c.sendMessage(msg)
+	if err != nil {
+		return nil, err
+	}
+
+	evalConfig := EvalConfigMsg{}
+
+	for {
+		line, err := c.GetLine()
+		if err != nil {
+			return nil, err
+		}
+
+		// Throw input away until we get a best move.
+		err = c.ParseLine(line, &evalConfig)
+		if err == nil {
+			return &evalConfig, nil
+		}
+	}
+}
+	
+// Get the engine evaluation configuration
+func (c *Client) SetEvalConfig(vals []int) error {
+}

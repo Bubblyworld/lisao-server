@@ -1,6 +1,7 @@
 package main
 
 import (
+	//"clanpj/lisao/rest/github"
 	"clanpj/lisao/tasks"
 	"flag"
 	"sync"
@@ -23,13 +24,17 @@ func main() {
 	state := NewState()
 	waitGroup := sync.WaitGroup{}
 
-	waitGroup.Add(3)
-	go state.PollGithubForever(&waitGroup)
-	go runPool(state.buildsPool, &waitGroup)
+	//waitGroup.Add(3)
+	waitGroup.Add(1)
+	// go state.PollGithubForever(&waitGroup)
+	// go runPool(state.buildsPool, &waitGroup)
 	go runPool(state.tournamentPool, &waitGroup)
 
-	engine := "/Users/guy/Workspace/lisao-bot/bin/uci"
-	tournament := tasks.NewTournament(engine, engine)
+	//engine := "/Users/guy/Workspace/lisao-bot/bin/uci"
+	engine1 := "./lisao-4server.exe"
+	engine2 := "./lisao-4server.exe"
+	//engine2 := "./heracles-0.6.16-elo1917.exe"
+	tournament := tasks.NewTournament(engine1, engine2)
 
 	for _, fen := range testFENS {
 		gameConfig := tasks.GameConfig{fen}
@@ -37,6 +42,8 @@ func main() {
 	}
 
 	state.tournamentPool.PushWork(tournament)
+
+	state.tournamentPool.StopWhenDone()
 
 	waitGroup.Wait()
 }
@@ -47,3 +54,5 @@ func runPool(pool *tasks.Pool, waitGroup *sync.WaitGroup) {
 
 	pool.Run()
 }
+
+

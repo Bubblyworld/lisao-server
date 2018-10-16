@@ -2,6 +2,7 @@ package uci
 
 import (
 	"errors"
+	"fmt"
 	"log"
 
 	"github.com/notnil/chess"
@@ -80,18 +81,27 @@ func PlayGame(white, black *Client, startFEN string) (*Game, error) {
 		}
 	}()
 
+	log.Println("Starting engines...")
 	if err := startEngines(white, black); err != nil {
 		return nil, err
 	}
 
+	log.Println("Handshaking engines...")
 	if err := handshakeEngines(white, black); err != nil {
 		return nil, err
 	}
 
+	log.Println("Getting engines eval config...")
+	if err := getEnginesEvalConfig(white, black); err != nil {
+		return nil, err
+	}
+
+	log.Println("Readying engines...")
 	if err := readyEngines(white, black); err != nil {
 		return nil, err
 	}
 
+	log.Println("Playing...")
 	return playGame(white, black, startFEN)
 }
 
@@ -110,23 +120,29 @@ func playGame(white, black *Client, startFEN string) (*Game, error) {
 			currentPlayer = black
 		}
 
+		//log.Println("    setting position for", currentPlayer, " to ", startFEN, " ", game.moves)
 		if err := currentPlayer.SetPosition(startFEN, game.moves); err != nil {
 			return nil, err
 		}
 
-		bestMove, err := currentPlayer.Search(SearchOptions{})
+		//log.Println("      searching...")
+		bestMove, err := currentPlayer.Search(SearchOptions{Depth: 3})
 		if err != nil {
 			return nil, err
 		}
 
+		//log.Println("      ... best move", bestMove)
 		// Validate the move and check endgame conditions.
-		// TODO(guy) support draws
 		err = chessGame.MoveStr(bestMove.Move)
 		if err != nil {
 			return nil, err
 		}
 
 		game.moves = append(game.moves, bestMove.Move)
+
+		// Test draw scenarios
+		chessGame.Draw(chess.ThreefoldRepetition)
+		chessGame.Draw(chess.FiftyMoveRule)
 
 		if chessGame.Outcome() != chess.NoOutcome {
 			break
@@ -147,6 +163,15 @@ func stopEngines(white, black *Client) error {
 
 func handshakeEngines(white, black *Client) error {
 	return combineErrors(white.DoHandshake(), black.DoHandshake())
+}
+
+func getEnginesEvalConfig(white, black *Client) error {
+	wEvalConfig, wErr := white.GetEvalConfig()
+	bEvalConfig, bErr := black.GetEvalConfig()
+
+	fmt.Printf("White eval config - %d params, black eval config - %d params", len(wEvalConfig.params), len(bEvalConfig.params))
+	
+	return combineErrors(wErr, bErr)
 }
 
 func readyEngines(white, black *Client) error {

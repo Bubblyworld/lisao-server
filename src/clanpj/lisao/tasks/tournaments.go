@@ -39,7 +39,8 @@ func DoTournament(work interface{}) error {
 
 	var games []*uci.Game
 	for _, config := range t.gameConfigs {
-		game, err := uci.PlayGame(&white, &black, config.StartFEN)
+		log.Println("Playing", t.pathToWhiteEngine, " vs ", t.pathToBlackEngine, " from ", config.StartFEN)
+		game, err := uci.PlayGame(white, black, config.StartFEN)
 		if err != nil {
 			return err
 		}

@@ -2,6 +2,7 @@ package uci
 
 import (
 	"errors"
+	"strconv"
 	"strings"
 )
 
@@ -127,3 +128,60 @@ func (m *BestMoveMsg) Unmarshal(args []string) error {
 
 	return nil
 }
+
+type EvalConfigParam struct {
+	Descr string
+	Min int
+	Max int
+	Delta int
+	Val int
+}
+
+func (m *EvalConfigParam) Unmarshal(paramString string) error {
+	paramStringLen := len(paramString)
+	if paramStringLen == 0 || paramString[0] != '{' || paramString[paramStringLen-1] != '}' {
+		return ErrIncorrectlyFormatted
+	}
+	fields := strings.Split(paramString[1:paramStringLen-1], ",")
+	if len(fields) != 5 {
+		return ErrIncorrectlyFormatted
+	}
+	var err error
+	m.Descr = fields[0]
+	m.Min, err = strconv.Atoi(fields[1])
+	if err != nil { return err }
+	m.Max, err = strconv.Atoi(fields[2])
+	if err != nil { return err }
+	m.Delta, err = strconv.Atoi(fields[3])
+	if err != nil { return err }
+	m.Val, err = strconv.Atoi(fields[4])
+	if err != nil { return err }
+
+	return nil
+}
+
+type EvalConfigMsg struct {
+	params []EvalConfigParam
+}
+
+func (m *EvalConfigMsg) Unmarshal(args []string) error {
+	if len(args) < 1 {
+		return ErrWrongNumberOfArgs
+	}
+
+	if args[0] != "evalconfig" {
+		return ErrIncorrectlyFormatted
+	}
+
+	paramStrings := args[1:]
+	m.params = make([]EvalConfigParam, len(paramStrings))
+		
+	for i, paramString := range paramStrings {
+		m.params[i] = EvalConfigParam{}
+		err := m.params[i].Unmarshal(paramString)
+		if err != nil { return err }
+	}
+	
+	return nil
+}
+

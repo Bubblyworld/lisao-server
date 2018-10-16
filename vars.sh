@@ -1,2 +1,2 @@
 #!/bin/bash
-export GOPATH=`pwd`
+export GOPATH=`pwd`:/c/Users/rolandp/go

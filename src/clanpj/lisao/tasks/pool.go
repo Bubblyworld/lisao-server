@@ -21,6 +21,7 @@ type Pool struct {
 	stopChan  chan bool
 	workChan  chan interface{}
 	waitGroup *sync.WaitGroup
+	stopWhenDone bool
 
 	isRunning bool
 }
@@ -35,6 +36,7 @@ func NewPool(poolLabel string, numWorkers int, processFunc ProcessFunc) *Pool {
 		stopChan:  make(chan bool),
 		workChan:  make(chan interface{}, 10),
 		waitGroup: &sync.WaitGroup{},
+		stopWhenDone: false,
 
 		isRunning: false,
 	}
@@ -79,6 +81,11 @@ func (p *Pool) Stop() error {
 	return nil
 }
 
+func (p *Pool) StopWhenDone() {
+	p.stopWhenDone = true
+}
+
+
 func (p *Pool) PushWork(work interface{}) {
 	p.workChan <- work
 }
@@ -112,6 +119,10 @@ workForeverLoop:
 			continue
 		}
 
+		if p.stopWhenDone {
+			break
+		}
+		
 		// No tasks, sleep for a bit to avoid spinning.
 		time.Sleep(time.Second)
 	}
