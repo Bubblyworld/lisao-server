@@ -2,6 +2,7 @@ package uci
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -142,6 +143,14 @@ func (c *Client) GetEvalConfig() (*EvalConfigMsg, error) {
 	}
 }
 	
-// Get the engine evaluation configuration
+// Set the engine evaluation configuration
 func (c *Client) SetEvalConfig(vals []int) error {
+	stringVals := make([]string, len(vals))
+	for i, v := range vals {
+		stringVals[i] = strconv.Itoa(v)
+	}
+
+	msg := fmt.Sprintf("setevalconfig %s", strings.Join(stringVals, " "))
+
+	return c.sendMessage(msg)
 }

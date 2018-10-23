@@ -2,7 +2,6 @@ package uci
 
 import (
 	"errors"
-	"fmt"
 	"log"
 
 	"github.com/notnil/chess"
@@ -91,13 +90,13 @@ func PlayGame(white, black *Client, startFEN string) (*Game, error) {
 		return nil, err
 	}
 
-	log.Println("Getting engines eval config...")
-	if err := getEnginesEvalConfig(white, black); err != nil {
+	log.Println("Readying engines...")
+	if err := readyEngines(white, black); err != nil {
 		return nil, err
 	}
 
-	log.Println("Readying engines...")
-	if err := readyEngines(white, black); err != nil {
+	log.Println("Getting engines eval config...")
+	if err := getEnginesEvalConfig(white, black); err != nil {
 		return nil, err
 	}
 
@@ -165,17 +164,17 @@ func handshakeEngines(white, black *Client) error {
 	return combineErrors(white.DoHandshake(), black.DoHandshake())
 }
 
+func readyEngines(white, black *Client) error {
+	return combineErrors(white.EnsureReadiness(), black.EnsureReadiness())
+}
+
 func getEnginesEvalConfig(white, black *Client) error {
 	wEvalConfig, wErr := white.GetEvalConfig()
 	bEvalConfig, bErr := black.GetEvalConfig()
 
-	fmt.Printf("White eval config - %d params, black eval config - %d params", len(wEvalConfig.params), len(bEvalConfig.params))
+	log.Printf("White eval config - %d params, black eval config - %d params", len(wEvalConfig.params), len(bEvalConfig.params))
 	
 	return combineErrors(wErr, bErr)
-}
-
-func readyEngines(white, black *Client) error {
-	return combineErrors(white.EnsureReadiness(), black.EnsureReadiness())
 }
 
 func combineErrors(a, b error) error {
